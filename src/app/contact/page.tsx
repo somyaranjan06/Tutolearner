@@ -90,10 +90,10 @@ export default function ContactPage() {
             {/* Consultation Process Steps */}
             <Card className="border-slate-200 bg-white shadow-card">
               <CardContent className="p-6 space-y-4">
-                <h3 className="font-heading font-bold text-base text-slate-900 flex items-center gap-2">
+                <h2 className="font-heading font-bold text-base text-slate-900 flex items-center gap-2">
                   <CalendarCheck className="h-4 w-4 text-[#0B4982]" />
                   <span>Admissions Consultation Process</span>
-                </h3>
+                </h2>
 
                 <ol className="space-y-3.5 text-xs sm:text-sm text-slate-600">
                   <li className="flex items-start gap-3">
@@ -132,10 +132,10 @@ export default function ContactPage() {
             {/* Direct Office Info */}
             <Card className="border-slate-200 bg-white shadow-card">
               <CardContent className="p-6 space-y-4">
-                <h3 className="font-heading font-bold text-base text-slate-900 flex items-center gap-2">
+                <h2 className="font-heading font-bold text-base text-slate-900 flex items-center gap-2">
                   <PhoneCall className="h-4 w-4 text-[#0B4982]" />
                   <span>Admissions Office &amp; Hours</span>
-                </h3>
+                </h2>
 
                 <ul className="space-y-3 text-xs sm:text-sm text-slate-600">
                   <li className="flex items-start gap-2.5">

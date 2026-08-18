@@ -169,9 +169,9 @@ export function ContactForm() {
           <div className="mx-auto flex h-12 w-12 sm:h-14 sm:w-14 items-center justify-center rounded-full bg-[#6BB640]/20 text-[#7ECB51] border border-[#6BB640]/40">
             <CheckCircle2 className="h-6 w-6 sm:h-7 sm:w-7" />
           </div>
-          <h3 className="font-heading text-xl sm:text-2xl md:text-3xl font-extrabold tracking-tight">
+          <h2 className="font-heading text-xl sm:text-2xl md:text-3xl font-extrabold tracking-tight">
             Consultation Request Logged
-          </h3>
+          </h2>
           <p className="text-slate-300 text-xs sm:text-sm max-w-md mx-auto leading-relaxed">
             Thank you, <strong className="text-white">{submitted.fullName}</strong>. Your enquiry details have been recorded in our admissions system.
           </p>

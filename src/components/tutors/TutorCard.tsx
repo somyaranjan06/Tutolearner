@@ -70,9 +70,9 @@ export function TutorCard({ tutor, className, isCompact = false }: TutorCardProp
         {/* Card Body */}
         <CardContent className="p-6 sm:p-7 space-y-5">
           <div>
-            <h4 className="text-2xs font-bold uppercase tracking-wider text-slate-600 mb-1.5">
+            <p className="text-2xs font-bold uppercase tracking-wider text-slate-600 mb-1.5">
               Faculty Profile
-            </h4>
+            </p>
             <p className="text-sm text-slate-600 leading-relaxed font-normal">
               {tutor.shortBio}
             </p>
@@ -91,9 +91,9 @@ export function TutorCard({ tutor, className, isCompact = false }: TutorCardProp
           )}
 
           <div>
-            <h4 className="text-2xs font-bold uppercase tracking-wider text-slate-600 mb-2.5">
+            <p className="text-2xs font-bold uppercase tracking-wider text-slate-600 mb-2.5">
               Core Instructional Focus
-            </h4>
+            </p>
             <ul className="space-y-2">
               {tutor.methodologyFocus.slice(0, 3).map((focus, index) => (
                 <li key={index} className="flex items-start gap-2 text-xs sm:text-sm text-slate-700">

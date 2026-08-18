@@ -99,9 +99,9 @@ export function SubjectCard({
           {/* Suggested Learning Outcomes */}
           {!isCompact && (
             <div>
-              <h4 className="text-2xs font-bold uppercase tracking-wider text-slate-600 mb-2.5">
+              <p className="text-2xs font-bold uppercase tracking-wider text-slate-600 mb-2.5">
                 Key Learning Outcomes
-              </h4>
+              </p>
               <ul className="space-y-2">
                 {subject.learningOutcomes.slice(0, 3).map((outcome, index) => (
                   <li key={index} className="flex items-start gap-2 text-xs sm:text-sm text-slate-700">

@@ -56,18 +56,18 @@ export function TutorProfile({ tutor }: TutorProfileProps) {
           <section className="rounded-2xl border border-slate-200 bg-slate-50/70 p-6 sm:p-8 space-y-4">
             <div className="flex items-center gap-2 text-slate-900">
               <Sparkles className="h-5 w-5 text-[#0B4982]" />
-              <h3 className="font-heading text-lg sm:text-xl font-bold tracking-tight">
+              <h2 className="font-heading text-lg sm:text-xl font-bold tracking-tight">
                 Teaching Approach &amp; Pedagogy
-              </h3>
+              </h2>
             </div>
             <p className="text-sm sm:text-base text-slate-700 leading-relaxed font-normal">
               {tutor.teachingStyle}
             </p>
 
             <div className="pt-2">
-              <h4 className="text-2xs font-bold uppercase tracking-wider text-slate-600 mb-3">
+              <p className="text-2xs font-bold uppercase tracking-wider text-slate-600 mb-3">
                 Core Pedagogical Focus Areas
-              </h4>
+              </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {tutor.methodologyFocus.map((focus, idx) => (
                   <div
@@ -158,16 +158,16 @@ export function TutorProfile({ tutor }: TutorProfileProps) {
           <Card className="border-slate-200 bg-white shadow-card">
             <CardContent className="p-6 sm:p-7 space-y-6">
               <div>
-                <h3 className="font-heading font-bold text-base text-slate-900 border-b border-slate-200 pb-3">
+                <h2 className="font-heading font-bold text-base text-slate-900 border-b border-slate-200 pb-3">
                   Teaching Schedule &amp; Format
-                </h3>
+                </h2>
               </div>
 
               {/* Curriculum Levels */}
               <div>
-                <h4 className="text-2xs font-bold uppercase tracking-wider text-slate-600 mb-2">
+                <p className="text-2xs font-bold uppercase tracking-wider text-slate-600 mb-2">
                   Curriculum Levels Covered
-                </h4>
+                </p>
                 <ul className="space-y-2 text-xs sm:text-sm text-slate-700">
                   {tutor.curriculumLevels.map((lvl, idx) => (
                     <li key={idx} className="flex items-start gap-2">
@@ -180,9 +180,9 @@ export function TutorProfile({ tutor }: TutorProfileProps) {
 
               {/* Format Options */}
               <div>
-                <h4 className="text-2xs font-bold uppercase tracking-wider text-slate-600 mb-2">
+                <p className="text-2xs font-bold uppercase tracking-wider text-slate-600 mb-2">
                   Format Options
-                </h4>
+                </p>
                 <div className="space-y-1.5 text-xs sm:text-sm text-slate-700">
                   {tutor.sessionFormats.map((fmt, idx) => (
                     <div
@@ -197,9 +197,9 @@ export function TutorProfile({ tutor }: TutorProfileProps) {
 
               {/* Availability Note */}
               <div>
-                <h4 className="text-2xs font-bold uppercase tracking-wider text-slate-600 mb-1.5">
+                <p className="text-2xs font-bold uppercase tracking-wider text-slate-600 mb-1.5">
                   Admissions Note
-                </h4>
+                </p>
                 <p className="text-xs text-slate-600 leading-relaxed">
                   {tutor.availabilityNote}
                 </p>

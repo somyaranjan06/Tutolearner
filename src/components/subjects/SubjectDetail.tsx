@@ -258,9 +258,9 @@ export function SubjectDetail({ subject }: SubjectDetailProps) {
                     </p>
 
                     <div className="pt-2 border-t border-slate-100">
-                      <h4 className="text-2xs font-bold uppercase tracking-wider text-slate-600 mb-2">
+                      <p className="text-2xs font-bold uppercase tracking-wider text-slate-600 mb-2">
                         Core Topics Covered:
-                      </h4>
+                      </p>
                       <ul className="space-y-1.5 text-xs text-slate-700">
                         {module.topics.map((topic, topicIdx) => (
                           <li key={topicIdx} className="flex items-start gap-2">
@@ -340,16 +340,16 @@ export function SubjectDetail({ subject }: SubjectDetailProps) {
           <Card className="border-slate-200 bg-white shadow-card">
             <CardContent className="p-6 sm:p-7 space-y-6">
               <div>
-                <h3 className="font-heading font-bold text-base text-slate-900 border-b border-slate-200 pb-3">
+                <h2 className="font-heading font-bold text-base text-slate-900 border-b border-slate-200 pb-3">
                   {subject.name} Enrollment Summary
-                </h3>
+                </h2>
               </div>
 
               {/* Faculty Summary */}
               <div>
-                <h4 className="text-2xs font-bold uppercase tracking-wider text-slate-600 mb-2">
+                <p className="text-2xs font-bold uppercase tracking-wider text-slate-600 mb-2">
                   Assigned Instructors
-                </h4>
+                </p>
                 <div className="space-y-2">
                   {assignedTutors.map((tutor) => (
                     <div
@@ -372,9 +372,9 @@ export function SubjectDetail({ subject }: SubjectDetailProps) {
 
               {/* Grade Band */}
               <div>
-                <h4 className="text-2xs font-bold uppercase tracking-wider text-slate-600 mb-1.5">
+                <p className="text-2xs font-bold uppercase tracking-wider text-slate-600 mb-1.5">
                   Target Grade Band
-                </h4>
+                </p>
                 <p className="text-xs font-semibold text-slate-800 bg-slate-50 p-2.5 rounded-lg border border-slate-100">
                   {subject.targetGrades}
                 </p>
@@ -382,9 +382,9 @@ export function SubjectDetail({ subject }: SubjectDetailProps) {
 
               {/* Class Formats */}
               <div>
-                <h4 className="text-2xs font-bold uppercase tracking-wider text-slate-600 mb-2">
+                <p className="text-2xs font-bold uppercase tracking-wider text-slate-600 mb-2">
                   Learning Formats
-                </h4>
+                </p>
                 <div className="space-y-1.5 text-xs text-slate-700">
                   <div className="rounded-lg bg-slate-50 p-2 border border-slate-100 font-medium">
                     1-on-1 Personalized Mentoring

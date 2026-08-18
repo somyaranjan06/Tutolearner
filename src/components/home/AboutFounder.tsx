@@ -30,9 +30,9 @@ export function AboutFounder() {
               <div className="mt-4 p-4.5 rounded-2xl bg-slate-50 border border-slate-200/80 space-y-3">
                 <div className="flex items-center justify-between">
                   <div>
-                    <h4 className="font-heading font-extrabold text-base text-slate-900">
+                    <p className="font-heading font-extrabold text-base text-slate-900">
                       Somya Ranjan Naik
-                    </h4>
+                    </p>
                     <p className="text-xs font-semibold text-[#0B4982]">
                       Mathematics &amp; Science Tutor
                     </p>

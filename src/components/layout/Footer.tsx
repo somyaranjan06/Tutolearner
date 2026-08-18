@@ -52,9 +52,9 @@ export function Footer() {
 
           {/* Quick Links Column (2 cols) */}
           <div className="space-y-3.5 lg:col-span-2">
-            <h4 className="font-heading text-xs font-bold uppercase tracking-wider text-white">
+            <h3 className="font-heading text-xs font-bold uppercase tracking-wider text-white">
               Quick Links
-            </h4>
+            </h3>
             <ul className="space-y-2.5 text-xs sm:text-sm">
               {footerLinks.explore.map((link) => (
                 <li key={link.label}>
@@ -71,9 +71,9 @@ export function Footer() {
 
           {/* Subjects Column (3 cols) */}
           <div className="space-y-3.5 lg:col-span-3">
-            <h4 className="font-heading text-xs font-bold uppercase tracking-wider text-white">
+            <h3 className="font-heading text-xs font-bold uppercase tracking-wider text-white">
               Subjects &amp; Tracks
-            </h4>
+            </h3>
             <ul className="space-y-2.5 text-xs sm:text-sm">
               {footerLinks.subjects.map((link) => (
                 <li key={link.label}>
@@ -90,9 +90,9 @@ export function Footer() {
 
           {/* Contact Column (3 cols) */}
           <div className="space-y-3.5 lg:col-span-3">
-            <h4 className="font-heading text-xs font-bold uppercase tracking-wider text-white">
+            <h3 className="font-heading text-xs font-bold uppercase tracking-wider text-white">
               Contact &amp; Admissions
-            </h4>
+            </h3>
             <ul className="space-y-3 text-xs sm:text-sm">
               {/* WhatsApp Phone */}
               <li>
