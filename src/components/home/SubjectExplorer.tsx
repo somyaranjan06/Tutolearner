@@ -75,7 +75,7 @@ export function SubjectExplorer() {
                     className="inline-flex items-center gap-2 text-sm font-bold text-slate-900 group-hover:text-[#0B4982] transition-colors"
                   >
                     <span>Explore {subject.name}</span>
-                    <ArrowRight className="h-4 w-4 text-slate-500 group-hover:text-[#0B4982] group-hover:translate-x-1 transition-all" />
+                    <ArrowRight className="h-4 w-4 text-slate-600 group-hover:text-[#0B4982] group-hover:translate-x-1 transition-all" />
                   </Link>
 
                   <Link

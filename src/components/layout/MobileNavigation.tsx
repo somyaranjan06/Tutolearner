@@ -64,7 +64,7 @@ export function MobileNavigation({ isOpen, onClose }: MobileNavigationProps) {
             </div>
             <span className="font-heading font-extrabold text-lg tracking-tight">
               <span className="text-[#0B4982]">Tuto</span>
-              <span className="text-[#6BB640]">Learner</span>
+              <span className="text-[#236B18]">Learner</span>
             </span>
           </div>
 
@@ -104,7 +104,7 @@ export function MobileNavigation({ isOpen, onClose }: MobileNavigationProps) {
                 )}
               >
                 <span>{item.label}</span>
-                <ArrowRight className="h-4 w-4 text-slate-500" />
+                <ArrowRight className="h-4 w-4 text-slate-600" />
               </Link>
             );
           })}
@@ -129,7 +129,7 @@ export function MobileNavigation({ isOpen, onClose }: MobileNavigationProps) {
               <span>{siteConfig.contactEmail}</span>
             </p>
             <p className="flex items-center gap-1.5 text-slate-600">
-              <Clock className="h-3 w-3 text-slate-500" />
+              <Clock className="h-3 w-3 text-slate-600" />
               <span>{siteConfig.academicHours}</span>
             </p>
           </div>

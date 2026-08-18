@@ -55,7 +55,7 @@ export function Navbar() {
             <div className="flex flex-col">
               <span className="font-heading text-lg sm:text-xl font-extrabold tracking-tight leading-none">
                 <span className="text-[#0B4982]">Tuto</span>
-                <span className="text-[#6BB640]">Learner</span>
+                <span className="text-[#236B18]">Learner</span>
               </span>
               <span className="text-[10px] font-medium tracking-wide text-slate-600 mt-0.5 hidden sm:inline">
                 Personalized Learning

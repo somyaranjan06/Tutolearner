@@ -129,7 +129,7 @@ export function Hero() {
 
                 {/* Connector */}
                 <div className="flex justify-center -my-1">
-                  <span className="text-xs text-slate-600">↓</span>
+                  <span className="text-xs text-slate-400">↓</span>
                 </div>
 
                 {/* Step 4: True Understanding */}

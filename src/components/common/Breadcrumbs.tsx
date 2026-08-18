@@ -33,7 +33,7 @@ export function Breadcrumbs({ items, className }: BreadcrumbsProps) {
           const isLast = index === items.length - 1;
           return (
             <li key={index} className="flex items-center space-x-1.5 sm:space-x-2">
-              <ChevronRight className="h-3.5 w-3.5 text-slate-500 shrink-0" aria-hidden="true" />
+              <ChevronRight className="h-3.5 w-3.5 text-slate-600 shrink-0" aria-hidden="true" />
               {isLast || !item.href ? (
                 <span className="font-medium text-slate-900 truncate max-w-[200px] sm:max-w-none" aria-current="page">
                   {item.label}

@@ -19,11 +19,11 @@ export function FloatingWhatsApp() {
         aria-label="Chat with TutoLearner on WhatsApp"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
-        className="group relative flex items-center gap-2.5 rounded-full bg-[#25D366] hover:bg-[#20bd5a] text-white p-3.5 sm:px-4 sm:py-3 shadow-lg hover:shadow-xl transition-all duration-300 ease-out focus-visible:outline-none focus-visible:ring-3 focus-visible:ring-[#25D366] focus-visible:ring-offset-2 active:scale-95"
+        className="group relative flex items-center gap-2.5 rounded-full bg-[#075E54] hover:bg-[#128C7E] text-white p-3.5 sm:px-4 sm:py-3 shadow-lg hover:shadow-xl transition-all duration-300 ease-out focus-visible:outline-none focus-visible:ring-3 focus-visible:ring-[#25D366] focus-visible:ring-offset-2 active:scale-95"
       >
         {/* Subtle breathing ripple glow */}
         <span
-          className="absolute inset-0 rounded-full bg-[#25D366] opacity-30 animate-ping -z-10"
+          className="absolute inset-0 rounded-full bg-[#25D366] opacity-20 animate-ping -z-10"
           aria-hidden="true"
         />
 

@@ -88,7 +88,7 @@ export function LearningResources() {
                       <Icon className="h-5 w-5 text-[#6BB640]" />
                     </div>
                     <span className="inline-flex items-center gap-1 rounded-full bg-slate-100 px-3 py-1 text-2xs font-semibold text-slate-700 border border-slate-200">
-                      <Clock className="h-3 w-3 text-slate-500" />
+                      <Clock className="h-3 w-3 text-slate-600" />
                       <span>{item.status}</span>
                     </span>
                   </div>

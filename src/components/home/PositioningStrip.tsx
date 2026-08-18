@@ -22,7 +22,7 @@ export function PositioningStrip() {
               </span>
               {index < pillars.length - 1 && (
                 <span
-                  className="hidden sm:inline text-slate-300 select-none text-xs font-light"
+                  className="hidden sm:inline text-slate-500 select-none text-xs font-light"
                   aria-hidden="true"
                 >
                   |

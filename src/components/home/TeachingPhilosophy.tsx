@@ -25,9 +25,9 @@ export function TeachingPhilosophy() {
         {/* Motto Pillars */}
         <div className="pt-4 flex flex-wrap items-center justify-center gap-6 sm:gap-10 text-xs sm:text-sm font-mono text-slate-300">
           <span className="text-[#BAE0FD]">01 · Concept Clarity</span>
-          <span className="hidden sm:inline text-slate-500">•</span>
+          <span className="hidden sm:inline text-slate-400">•</span>
           <span className="text-[#BAE0FD]">02 · Adaptive Pacing</span>
-          <span className="hidden sm:inline text-slate-500">•</span>
+          <span className="hidden sm:inline text-slate-400">•</span>
           <span className="text-[#BAE0FD]">03 · Guided Mastery</span>
         </div>
       </div>
