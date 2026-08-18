@@ -1,0 +1,17 @@
+<svg width="280" height="70" viewBox="0 0 280 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Sprouting Leaves (Brand Green #6BB640) -->
+  <g transform="translate(10, 4) scale(0.9)">
+    <path d="M30 38C30 23 32 13 43 11C43 21 37 30 30 38Z" fill="#6BB640" />
+    <path d="M29 34C26 25 20 18 14 17C13 24 18 31 27 34L29 34Z" fill="#6BB640" opacity="0.9" />
+    
+    <!-- Open Book Spine & Base (Brand Primary Blue #0B4982) -->
+    <path d="M30 45L10 36V20L30 29V45Z" stroke="#0B4982" stroke-width="4" stroke-linejoin="round" />
+    <path d="M30 45L50 36V20L30 29V45Z" stroke="#0B4982" stroke-width="4" stroke-linejoin="round" />
+    <path d="M10 36L30 45L50 36" fill="none" stroke="#083A68" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+
+  <!-- Wordmark: Tuto in #0B4982, learner in #6BB640 -->
+  <text x="68" y="44" font-family="var(--font-outfit), Outfit, system-ui, -apple-system, sans-serif" font-size="30" font-weight="800" letter-spacing="-0.75">
+    <tspan fill="#0B4982">Tuto</tspan><tspan fill="#6BB640">learner</tspan>
+  </text>
+</svg>

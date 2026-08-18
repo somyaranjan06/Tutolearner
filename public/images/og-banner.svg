@@ -1,0 +1,26 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#071F36" />
+  
+  <!-- Subtle decorative ambient circles -->
+  <circle cx="1050" cy="150" r="220" stroke="#0B4982" stroke-width="1.5" stroke-dasharray="8 8" opacity="0.4" />
+  <circle cx="150" cy="500" r="180" stroke="#6BB640" stroke-width="1.5" opacity="0.2" />
+  
+  <!-- Brand Badge -->
+  <rect x="80" y="80" width="260" height="42" rx="21" fill="#0B4982" stroke="#125D9E" />
+  <text x="210" y="106" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle" letter-spacing="1">PERSONALIZED LEARNING</text>
+  
+  <!-- Main Title -->
+  <text x="80" y="210" font-family="system-ui, sans-serif" font-size="60" font-weight="800" fill="#FFFFFF" letter-spacing="-1">
+    <tspan fill="#FFFFFF">Tuto</tspan><tspan fill="#6BB640">Learner</tspan>
+  </text>
+  <text x="80" y="275" font-family="system-ui, sans-serif" font-size="28" font-weight="600" fill="#BAE0FD">Utilize Resources. Deliver Excellence.</text>
+  
+  <!-- Disciplines Pill Box -->
+  <rect x="80" y="340" width="1040" height="110" rx="16" fill="#082949" stroke="#0B4982" />
+  <text x="120" y="380" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#6BB640" letter-spacing="1">CORE DISCIPLINES</text>
+  <text x="120" y="420" font-family="system-ui, sans-serif" font-size="20" font-weight="700" fill="#FFFFFF">Mathematics  •  Science  •  Social Science  •  English</text>
+  
+  <!-- Faculty Tag -->
+  <rect x="80" y="490" width="1040" height="70" rx="12" fill="#051728" stroke="#082949" />
+  <text x="120" y="532" font-family="system-ui, sans-serif" font-size="16" font-weight="600" fill="#E0EFFF">Faculty: Somya Ranjan Naik  •  Shiwangi  •  Shreya Tiwari</text>
+</svg>

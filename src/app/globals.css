@@ -1,0 +1,174 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 40% 98%;
+    --foreground: 222 47% 11%;
+
+    --surface: 0 0% 100%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+
+    /* TutoLearner Brand Tokens */
+    --brand-primary: #0B4982;
+    --brand-primary-dark: #083A68;
+    --brand-primary-light: #125D9E;
+    --brand-secondary: #6BB640;
+    --brand-secondary-dark: #579631;
+    --brand-secondary-light: #7ECB51;
+
+    --primary: 209 84% 28%;
+    --primary-dark: 209 86% 22%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 97 48% 49%;
+    --secondary-dark: 98 51% 39%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215 16% 47%;
+
+    --accent: 97 48% 49%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 209 84% 28%;
+
+    --radius: 0.75rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-white text-foreground antialiased;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Typography Hierarchy */
+  h1 {
+    @apply font-heading font-extrabold tracking-tight text-slate-900;
+  }
+  h2 {
+    @apply font-heading font-bold tracking-tight text-slate-900;
+  }
+  h3 {
+    @apply font-heading font-bold tracking-tight text-slate-900;
+  }
+  h4 {
+    @apply font-heading font-semibold tracking-tight text-slate-900;
+  }
+  p {
+    @apply text-slate-600 leading-relaxed;
+  }
+}
+
+/* Accessible focus ring system with brand primary */
+:focus-visible {
+  outline: 2px solid #0B4982;
+  outline-offset: 2px;
+}
+
+/* Subtle Motion Design Tokens */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+.animate-slide-in-right {
+  animation: slideInRight 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Stagger delay utilities */
+.animation-delay-100 {
+  animation-delay: 100ms;
+}
+
+.animation-delay-200 {
+  animation-delay: 200ms;
+}
+
+.animation-delay-300 {
+  animation-delay: 300ms;
+}
+
+/* Subtle micro-transition utility for cards and buttons */
+.transition-lift {
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.2s ease;
+}
+
+.transition-lift:hover {
+  transform: translateY(-3px);
+}
+
+.transition-lift:active {
+  transform: translateY(-1px) scale(0.99);
+}
+
+/* Accessibility: Respect prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .animate-fade-in-up,
+  .animate-fade-in,
+  .animate-slide-in-right,
+  .transition-lift {
+    animation: none !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}

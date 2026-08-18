@@ -1,0 +1,31 @@
+<svg width="400" height="400" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgShreya" x1="0" y1="0" x2="400" y2="400" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#1E293B" />
+      <stop offset="100%" stop-color="#0F172A" />
+    </linearGradient>
+    <linearGradient id="engAccent" x1="0" y1="0" x2="200" y2="200" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#D97706" />
+      <stop offset="100%" stop-color="#B45309" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="400" rx="24" fill="url(#bgShreya)" />
+  
+  <!-- Subtle Open Book / Science rings -->
+  <circle cx="200" cy="200" r="140" stroke="#334155" stroke-width="1.5" stroke-dasharray="8 8" />
+  <path d="M120 280 Q200 250 280 280" stroke="#475569" stroke-width="2" fill="none" />
+  <path d="M120 290 Q200 260 280 290" stroke="#334155" stroke-width="1.5" fill="none" />
+  
+  <!-- Avatar Silhouette / Monogram Art -->
+  <circle cx="200" cy="160" r="64" fill="url(#engAccent)" />
+  <text x="200" y="176" font-family="system-ui, sans-serif" font-size="44" font-weight="700" fill="#FFFFFF" text-anchor="middle">ST</text>
+  
+  <!-- Body Silhouette -->
+  <path d="M110 320 C110 250, 150 240, 200 240 C250 240, 290 250, 290 320" fill="#334155" />
+  
+  <!-- Subject Indicator Badge -->
+  <rect x="90" y="340" width="220" height="36" rx="18" fill="#451A03" stroke="#D97706" stroke-width="1.5" />
+  <text x="200" y="363" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="#FEF3C7" text-anchor="middle">SCIENCE &amp; ENGLISH</text>
+</svg>

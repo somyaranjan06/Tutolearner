@@ -1,0 +1,133 @@
+import * as React from "react";
+import Image from "next/image";
+import Link from "next/link";
+import { Tutor } from "@/types";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardFooter } from "@/components/ui/card";
+import { ArrowRight, Sparkles, CheckCircle2, ShieldCheck } from "lucide-react";
+import { cn } from "@/lib/utils";
+
+interface TutorCardProps {
+  tutor: Tutor;
+  className?: string;
+  isCompact?: boolean;
+}
+
+export function TutorCard({ tutor, className, isCompact = false }: TutorCardProps) {
+  const firstName = tutor.name.split(" ")[0];
+
+  return (
+    <Card
+      className={cn(
+        "group flex flex-col justify-between overflow-hidden rounded-2xl border border-slate-200/90 bg-white transition-all duration-200 hover:border-blue-200 hover:shadow-lifted",
+        className
+      )}
+    >
+      <div>
+        {/* Tutor Visual Header Plaque */}
+        <div className="relative bg-[#071F36] p-6 sm:p-7 text-white">
+          <div className="flex items-start gap-4 sm:gap-5">
+            <div className="relative h-20 w-20 shrink-0 overflow-hidden rounded-2xl border border-slate-700 bg-slate-800 shadow-md">
+              <Image
+                src={tutor.image}
+                alt={`Portrait of ${tutor.name}`}
+                width={80}
+                height={80}
+                sizes="80px"
+                className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-200"
+              />
+            </div>
+
+            <div className="space-y-1.5 flex-1 min-w-0">
+              <div className="flex items-center gap-1.5">
+                <span className="inline-flex items-center gap-1 text-2xs font-bold uppercase tracking-wider text-[#7ECB51] bg-[#052814] border border-[#6BB640]/40 px-2 py-0.5 rounded">
+                  <ShieldCheck className="h-3 w-3" />
+                  <span>Verified Faculty</span>
+                </span>
+              </div>
+              <h3 className="font-heading text-xl sm:text-2xl font-bold tracking-tight text-white group-hover:text-[#BAE0FD] transition-colors truncate">
+                {tutor.name}
+              </h3>
+              <p className="text-xs sm:text-sm text-slate-300 line-clamp-1 font-medium">
+                {tutor.roleTitle}
+              </p>
+            </div>
+          </div>
+
+          {/* Subjects Badges */}
+          <div className="mt-5 flex flex-wrap gap-1.5 pt-3 border-t border-slate-800">
+            {tutor.subjects.map((subject) => (
+              <span
+                key={subject}
+                className="inline-flex items-center rounded-md bg-[#082949] px-2.5 py-1 text-xs font-semibold text-[#BAE0FD] border border-[#0B4982]"
+              >
+                {subject}
+              </span>
+            ))}
+          </div>
+        </div>
+
+        {/* Card Body */}
+        <CardContent className="p-6 sm:p-7 space-y-5">
+          <div>
+            <h4 className="text-2xs font-bold uppercase tracking-wider text-slate-500 mb-1.5">
+              Faculty Profile
+            </h4>
+            <p className="text-sm text-slate-600 leading-relaxed font-normal">
+              {tutor.shortBio}
+            </p>
+          </div>
+
+          {!isCompact && (
+            <div className="rounded-xl bg-slate-50 p-4 border border-slate-200/70 space-y-1.5">
+              <div className="flex items-center gap-1.5 text-2xs font-bold uppercase tracking-wider text-slate-700">
+                <Sparkles className="h-3.5 w-3.5 text-[#0B4982]" />
+                <span>Pedagogy &amp; Approach</span>
+              </div>
+              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
+                {tutor.teachingStyle}
+              </p>
+            </div>
+          )}
+
+          <div>
+            <h4 className="text-2xs font-bold uppercase tracking-wider text-slate-500 mb-2.5">
+              Core Instructional Focus
+            </h4>
+            <ul className="space-y-2">
+              {tutor.methodologyFocus.slice(0, 3).map((focus, index) => (
+                <li key={index} className="flex items-start gap-2 text-xs sm:text-sm text-slate-700">
+                  <CheckCircle2 className="h-4 w-4 text-[#6BB640] shrink-0 mt-0.5" />
+                  <span className="leading-snug font-normal">{focus}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </CardContent>
+      </div>
+
+      {/* Card Footer Actions */}
+      <CardFooter className="p-6 sm:p-7 pt-0 flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 border-t border-slate-100 mt-2">
+        <Button
+          asChild
+          variant="outline"
+          className="flex-1 justify-center border-slate-200 hover:bg-blue-50/60 hover:text-[#0B4982] hover:border-blue-200 text-xs sm:text-sm font-semibold rounded-xl"
+        >
+          <Link href={`/tutors/${tutor.slug}`}>
+            <span>View Profile</span>
+          </Link>
+        </Button>
+
+        <Button
+          asChild
+          className="flex-1 justify-center bg-[#0B4982] hover:bg-[#083A68] text-white text-xs sm:text-sm font-semibold gap-1.5 rounded-xl shadow-subtle"
+        >
+          <Link href={`/contact?tutor=${tutor.slug}`}>
+            <span>Enquire with {firstName}</span>
+            <ArrowRight className="h-3.5 w-3.5" />
+          </Link>
+        </Button>
+      </CardFooter>
+    </Card>
+  );
+}
