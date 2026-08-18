@@ -14,6 +14,8 @@ export const socialLinks = {
     "Hello TutoLearner! I would like to know more about your tutoring programs.",
 };
 
+export const PRODUCTION_DOMAIN = "https://tutolearner.in";
+
 export const siteConfig = {
   name: "TutoLearner",
   shortName: "TutoLearner",
@@ -22,8 +24,8 @@ export const siteConfig = {
   manifesto: "Utilize Resources. Deliver Excellence.",
   description:
     "TutoLearner connects students with personalized academic guidance, subject-focused tutoring, and learning resources designed around how they learn.",
-  url: process.env.NEXT_PUBLIC_SITE_URL || "https://tutolearner.in",
-  ogImage: "/images/og-banner.svg",
+  url: PRODUCTION_DOMAIN,
+  ogImage: `${PRODUCTION_DOMAIN}/images/og-banner.svg`,
   contactEmail: "enquiry@tutolearner.edu",
   contactPhone: "+91 9827118949",
   academicHours: "Monday – Saturday: 9:00 AM – 8:00 PM IST",
