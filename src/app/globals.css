@@ -61,6 +61,12 @@
     scroll-behavior: smooth;
   }
 
+  /* Performance: Defer offscreen rendering to accelerate above-the-fold LCP */
+  .content-auto {
+    content-visibility: auto;
+    contain-intrinsic-size: 1px 700px;
+  }
+
   /* Typography Hierarchy */
   h1 {
     @apply font-heading font-extrabold tracking-tight text-slate-900;

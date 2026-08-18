@@ -47,6 +47,7 @@ export function Navbar() {
                 alt="TutoLearner"
                 width={48}
                 height={48}
+                sizes="48px"
                 className="h-full w-full object-contain"
                 priority
               />

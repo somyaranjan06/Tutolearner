@@ -53,32 +53,35 @@ export default function HomePage() {
       {/* 2. Positioning Strip */}
       <PositioningStrip />
 
-      {/* 3. Editorial Brand Section (Not every student learns the same way) */}
-      <EditorialBrandSection />
+      {/* Below-the-fold sections with deferred layout computation for sub-second Hero LCP */}
+      <div className="content-auto">
+        {/* 3. Editorial Brand Section (Not every student learns the same way) */}
+        <EditorialBrandSection />
 
-      {/* 4. Subject Explorer */}
-      <SubjectExplorer />
+        {/* 4. Subject Explorer */}
+        <SubjectExplorer />
 
-      {/* 5. Tutors Section */}
-      <TutorsSection />
+        {/* 5. Tutors Section */}
+        <TutorsSection />
 
-      {/* 6. How TutoLearner Works (4-Step Process) */}
-      <LearningProcess />
+        {/* 6. How TutoLearner Works (4-Step Process) */}
+        <LearningProcess />
 
-      {/* 7. Learning Resources (Coming Soon) */}
-      <LearningResources />
+        {/* 7. Learning Resources (Coming Soon) */}
+        <LearningResources />
 
-      {/* 8. Teaching Philosophy (Brand Manifesto) */}
-      <TeachingPhilosophy />
+        {/* 8. Teaching Philosophy (Brand Manifesto) */}
+        <TeachingPhilosophy />
 
-      {/* 9. FAQ Section */}
-      <FAQSection />
+        {/* 9. FAQ Section */}
+        <FAQSection />
 
-      {/* 10. About the Founder (Somya Ranjan Naik) */}
-      <AboutFounder />
+        {/* 10. About the Founder (Somya Ranjan Naik) */}
+        <AboutFounder />
 
-      {/* 11. Final CTA */}
-      <FinalCTA />
+        {/* 11. Final CTA */}
+        <FinalCTA />
+      </div>
     </div>
   );
 }
