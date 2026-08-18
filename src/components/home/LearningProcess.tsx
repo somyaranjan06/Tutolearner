@@ -63,7 +63,7 @@ export function LearningProcess() {
                   <span className="font-mono text-xl sm:text-2xl font-extrabold text-[#0B4982]">
                     {item.step}
                   </span>
-                  <span className="text-2xs font-bold uppercase tracking-wider text-slate-400">
+                  <span className="text-2xs font-bold uppercase tracking-wider text-slate-600">
                     Step {index + 1}
                   </span>
                 </div>
@@ -79,13 +79,13 @@ export function LearningProcess() {
                 </p>
 
                 {/* Detail */}
-                <p className="text-xs sm:text-sm text-slate-500 leading-relaxed font-normal">
+                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
                   {item.detail}
                 </p>
               </div>
 
               {/* Bottom line indicator */}
-              <div className="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between text-2xs font-mono text-slate-400">
+              <div className="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between text-2xs font-mono text-slate-600">
                 <span>Phase {index + 1} of 4</span>
                 <span className="text-[#0B4982] font-bold text-sm">→</span>
               </div>

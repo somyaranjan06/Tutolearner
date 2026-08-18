@@ -56,7 +56,7 @@ export function Navbar() {
                 <span className="text-[#0B4982]">Tuto</span>
                 <span className="text-[#6BB640]">Learner</span>
               </span>
-              <span className="text-[10px] font-medium tracking-wide text-slate-500 mt-0.5 hidden sm:inline">
+              <span className="text-[10px] font-medium tracking-wide text-slate-600 mt-0.5 hidden sm:inline">
                 Personalized Learning
               </span>
             </div>
@@ -83,7 +83,7 @@ export function Navbar() {
                     "px-3.5 py-2 text-sm font-medium rounded-lg transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0B4982]",
                     isExactActive
                       ? "text-[#0B4982] font-semibold bg-blue-50/80"
-                      : "text-slate-600 hover:text-[#0B4982] hover:bg-slate-50"
+                      : "text-slate-700 hover:text-[#0B4982] hover:bg-slate-50"
                   )}
                 >
                   {item.label}

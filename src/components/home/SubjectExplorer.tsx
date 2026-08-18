@@ -36,7 +36,7 @@ export function SubjectExplorer() {
                 <div className="space-y-6">
                   {/* Top Meta Bar */}
                   <div className="flex items-center justify-between gap-4">
-                    <span className="font-mono text-xs font-bold uppercase tracking-wider text-slate-400">
+                    <span className="font-mono text-xs font-bold uppercase tracking-wider text-slate-600">
                       0{index + 1}
                     </span>
                     <span className="rounded-full bg-blue-50/80 px-3 py-1 text-2xs font-semibold text-[#0B4982] border border-blue-100">
@@ -49,7 +49,7 @@ export function SubjectExplorer() {
                     <h3 className="font-heading text-2.5xl sm:text-3xl font-extrabold text-slate-900 tracking-tight group-hover:text-[#0B4982] transition-colors">
                       {subject.name}
                     </h3>
-                    <p className="text-sm text-slate-500 font-medium">
+                    <p className="text-sm text-slate-600 font-medium">
                       {subject.tagline}
                     </p>
                   </div>
@@ -75,12 +75,12 @@ export function SubjectExplorer() {
                     className="inline-flex items-center gap-2 text-sm font-bold text-slate-900 group-hover:text-[#0B4982] transition-colors"
                   >
                     <span>Explore {subject.name}</span>
-                    <ArrowRight className="h-4 w-4 text-slate-400 group-hover:text-[#0B4982] group-hover:translate-x-1 transition-all" />
+                    <ArrowRight className="h-4 w-4 text-slate-500 group-hover:text-[#0B4982] group-hover:translate-x-1 transition-all" />
                   </Link>
 
                   <Link
                     href={`/contact?subject=${subject.slug}`}
-                    className="text-xs font-semibold text-slate-500 hover:text-[#0B4982] transition-colors"
+                    className="text-xs font-semibold text-slate-700 hover:text-[#0B4982] transition-colors"
                   >
                     Enquire
                   </Link>

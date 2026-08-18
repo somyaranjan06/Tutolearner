@@ -48,7 +48,7 @@ export function AboutFounder() {
 
                 {/* LinkedIn Link for Somya */}
                 <div className="pt-2.5 border-t border-slate-200/70 flex items-center justify-between">
-                  <span className="text-2xs font-bold uppercase tracking-wider text-slate-500">
+                  <span className="text-2xs font-bold uppercase tracking-wider text-slate-600">
                     Professional Profile:
                   </span>
                   <a
@@ -77,7 +77,7 @@ export function AboutFounder() {
               <h2 className="font-heading text-3xl sm:text-4xl md:text-4.5xl font-extrabold tracking-tight text-slate-900 leading-[1.12]">
                 Somya Ranjan Naik
               </h2>
-              <p className="text-sm font-semibold uppercase tracking-wider text-slate-500">
+              <p className="text-sm font-semibold uppercase tracking-wider text-slate-600">
                 Founder, TutoLearner | Mathematics &amp; Science Tutor
               </p>
             </div>

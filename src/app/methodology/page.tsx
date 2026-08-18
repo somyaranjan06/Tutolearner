@@ -93,7 +93,7 @@ export default function MethodologyPage() {
             <h2 className="font-heading text-2xl font-bold text-slate-900">
               The 5 Core Learning Principles
             </h2>
-            <p className="text-sm text-slate-500 mt-1">
+            <p className="text-sm text-slate-600 mt-1">
               Applied consistently across Mathematics, Science, Social Science, and English.
             </p>
           </div>
@@ -130,8 +130,8 @@ export default function MethodologyPage() {
                     </p>
                   </div>
 
-                  <div className="mt-6 pt-4 border-t border-slate-100 flex items-center gap-1.5 text-xs font-semibold text-slate-500">
-                    <CheckCircle2 className="h-3.5 w-3.5 text-[#6BB640] shrink-0" />
+                  <div className="mt-6 pt-4 border-t border-slate-100 flex items-center gap-1.5 text-xs font-semibold text-slate-600">
+                    <CheckCircle2 className="h-3.5 w-3.5 text-[#579631] shrink-0" />
                     <span>Applied across all subjects</span>
                   </div>
                 </div>
@@ -166,7 +166,7 @@ export default function MethodologyPage() {
             <h2 className="font-heading text-2xl font-bold text-slate-900">
               The 4-Step Learning Roadmap
             </h2>
-            <p className="text-sm text-slate-500 mt-1">
+            <p className="text-sm text-slate-600 mt-1">
               How students advance from introductory consultation to consistent concept mastery.
             </p>
           </div>

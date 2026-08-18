@@ -87,8 +87,8 @@ export function LearningResources() {
                     <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-[#082949] text-white shadow-subtle">
                       <Icon className="h-5 w-5 text-[#6BB640]" />
                     </div>
-                    <span className="inline-flex items-center gap-1 rounded-full bg-slate-100 px-3 py-1 text-2xs font-semibold text-slate-600 border border-slate-200">
-                      <Clock className="h-3 w-3 text-slate-400" />
+                    <span className="inline-flex items-center gap-1 rounded-full bg-slate-100 px-3 py-1 text-2xs font-semibold text-slate-700 border border-slate-200">
+                      <Clock className="h-3 w-3 text-slate-500" />
                       <span>{item.status}</span>
                     </span>
                   </div>
@@ -102,7 +102,7 @@ export function LearningResources() {
                   </p>
                 </div>
 
-                <div className="mt-6 pt-4 border-t border-slate-100 text-2xs font-mono text-slate-400">
+                <div className="mt-6 pt-4 border-t border-slate-100 text-2xs font-mono text-slate-600">
                   Resource Category
                 </div>
               </div>

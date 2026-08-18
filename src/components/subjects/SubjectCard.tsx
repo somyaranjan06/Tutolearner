@@ -77,7 +77,7 @@ export function SubjectCard({
         <CardContent className="p-6 sm:p-7 space-y-5">
           {/* Assigned Faculty Section */}
           <div className="rounded-xl bg-slate-50 p-3.5 border border-slate-200/70">
-            <div className="flex items-center gap-1.5 text-2xs font-bold uppercase tracking-wider text-slate-500 mb-1">
+            <div className="flex items-center gap-1.5 text-2xs font-bold uppercase tracking-wider text-slate-600 mb-1">
               <UserCheck className="h-3.5 w-3.5 text-[#0B4982]" />
               <span>{isDualFaculty ? "Assigned Faculty (Collaborative)" : "Lead Instructor"}</span>
             </div>
@@ -85,7 +85,7 @@ export function SubjectCard({
               {subject.tutor.join(" & ")}
             </p>
             {isDualFaculty && (
-              <p className="text-2xs text-slate-500 mt-0.5">
+              <p className="text-2xs text-slate-600 mt-0.5">
                 Physics, Chemistry &amp; Biology specialized instruction
               </p>
             )}
@@ -99,7 +99,7 @@ export function SubjectCard({
           {/* Suggested Learning Outcomes */}
           {!isCompact && (
             <div>
-              <h4 className="text-2xs font-bold uppercase tracking-wider text-slate-500 mb-2.5">
+              <h4 className="text-2xs font-bold uppercase tracking-wider text-slate-600 mb-2.5">
                 Key Learning Outcomes
               </h4>
               <ul className="space-y-2">

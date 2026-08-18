@@ -151,12 +151,12 @@ export function Footer() {
         </div>
 
         {/* Bottom Copyright */}
-        <div className="mt-14 pt-8 border-t border-slate-800/80 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+        <div className="mt-14 pt-8 border-t border-slate-800/80 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
           <p>
             &copy; {new Date().getFullYear()} TutoLearner. All rights reserved. Somya Ranjan Naik, Shiwangi &amp; Shreya Tiwari.
           </p>
 
-          <p className="text-2xs font-mono text-slate-400">
+          <p className="text-2xs font-mono text-slate-300">
             Utilize Resources. Deliver Excellence.
           </p>
         </div>

@@ -181,7 +181,7 @@ export function ContactForm() {
           {/* Reference & Summary Box */}
           <div className="rounded-2xl bg-slate-50 border border-slate-200 p-4 sm:p-6 space-y-4">
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-200 pb-3">
-              <span className="text-xs font-bold uppercase tracking-wider text-slate-500">
+              <span className="text-xs font-bold uppercase tracking-wider text-slate-600">
                 Enquiry Reference ID:
               </span>
               <span className="font-mono font-bold text-sm sm:text-base text-[#0B4982] bg-white px-3 py-1 rounded-lg border border-slate-200 shadow-subtle inline-block self-start sm:self-auto">
@@ -191,21 +191,21 @@ export function ContactForm() {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 text-xs sm:text-sm text-slate-700">
               <div>
-                <span className="font-bold text-slate-500 block text-2xs uppercase tracking-wider mb-0.5">
+                <span className="font-bold text-slate-600 block text-2xs uppercase tracking-wider mb-0.5">
                   Contact Email:
                 </span>
                 <span className="font-medium text-slate-900 break-all">{submitted.email}</span>
               </div>
 
               <div>
-                <span className="font-bold text-slate-500 block text-2xs uppercase tracking-wider mb-0.5">
+                <span className="font-bold text-slate-600 block text-2xs uppercase tracking-wider mb-0.5">
                   Phone / WhatsApp:
                 </span>
                 <span className="font-medium text-slate-900">{submitted.phone}</span>
               </div>
 
               <div>
-                <span className="font-bold text-slate-500 block text-2xs uppercase tracking-wider mb-0.5">
+                <span className="font-bold text-slate-600 block text-2xs uppercase tracking-wider mb-0.5">
                   Subject Selected:
                 </span>
                 <span className="font-semibold text-[#0B4982] bg-blue-50 px-2 py-0.5 rounded border border-blue-200">
@@ -214,21 +214,21 @@ export function ContactForm() {
               </div>
 
               <div>
-                <span className="font-bold text-slate-500 block text-2xs uppercase tracking-wider mb-0.5">
+                <span className="font-bold text-slate-600 block text-2xs uppercase tracking-wider mb-0.5">
                   Assigned / Preferred Tutor:
                 </span>
                 <span className="font-medium text-slate-900">{submitted.preferredTutor}</span>
               </div>
 
               <div>
-                <span className="font-bold text-slate-500 block text-2xs uppercase tracking-wider mb-0.5">
+                <span className="font-bold text-slate-600 block text-2xs uppercase tracking-wider mb-0.5">
                   Grade / Class:
                 </span>
                 <span className="font-medium text-slate-900">{submitted.studentGrade}</span>
               </div>
 
               <div>
-                <span className="font-bold text-slate-500 block text-2xs uppercase tracking-wider mb-0.5">
+                <span className="font-bold text-slate-600 block text-2xs uppercase tracking-wider mb-0.5">
                   Learning Mode:
                 </span>
                 <span className="font-medium text-slate-900 capitalize">{submitted.preferredMode}</span>
@@ -284,7 +284,7 @@ export function ContactForm() {
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-6" noValidate>
           {/* Submitting as: Parent / Student */}
           <div>
-            <Label className="block mb-2 text-2xs font-bold uppercase tracking-wider text-slate-500">
+            <Label className="block mb-2 text-2xs font-bold uppercase tracking-wider text-slate-600">
               I am submitting this enquiry as a:
             </Label>
             <div className="grid grid-cols-2 gap-3">
@@ -440,7 +440,7 @@ export function ContactForm() {
                   </option>
                 ))}
               </select>
-              <p className="text-2xs text-slate-500">
+              <p className="text-2xs text-slate-600">
                 {selectedSubject === "Science"
                   ? "Science is taught by Somya Ranjan Naik and Shreya Tiwari."
                   : `Tutor mapped to ${selectedSubject}.`}
@@ -503,7 +503,7 @@ export function ContactForm() {
 
           {/* Privacy Commitment Notice */}
           <div className="rounded-xl border border-slate-200 bg-slate-50 p-3.5 flex items-start gap-2.5 text-xs text-slate-600 leading-relaxed">
-            <Lock className="h-4 w-4 text-slate-500 shrink-0 mt-0.5" />
+            <Lock className="h-4 w-4 text-slate-600 shrink-0 mt-0.5" />
             <p>
               <strong className="text-slate-800 font-semibold">Privacy Commitment:</strong> Your contact details are used strictly to coordinate your diagnostic session and schedule with the faculty. We never share student information or send unsolicited spam.
             </p>

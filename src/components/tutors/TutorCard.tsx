@@ -70,7 +70,7 @@ export function TutorCard({ tutor, className, isCompact = false }: TutorCardProp
         {/* Card Body */}
         <CardContent className="p-6 sm:p-7 space-y-5">
           <div>
-            <h4 className="text-2xs font-bold uppercase tracking-wider text-slate-500 mb-1.5">
+            <h4 className="text-2xs font-bold uppercase tracking-wider text-slate-600 mb-1.5">
               Faculty Profile
             </h4>
             <p className="text-sm text-slate-600 leading-relaxed font-normal">
@@ -91,13 +91,13 @@ export function TutorCard({ tutor, className, isCompact = false }: TutorCardProp
           )}
 
           <div>
-            <h4 className="text-2xs font-bold uppercase tracking-wider text-slate-500 mb-2.5">
+            <h4 className="text-2xs font-bold uppercase tracking-wider text-slate-600 mb-2.5">
               Core Instructional Focus
             </h4>
             <ul className="space-y-2">
               {tutor.methodologyFocus.slice(0, 3).map((focus, index) => (
                 <li key={index} className="flex items-start gap-2 text-xs sm:text-sm text-slate-700">
-                  <CheckCircle2 className="h-4 w-4 text-[#6BB640] shrink-0 mt-0.5" />
+                  <CheckCircle2 className="h-4 w-4 text-[#579631] shrink-0 mt-0.5" />
                   <span className="leading-snug font-normal">{focus}</span>
                 </li>
               ))}

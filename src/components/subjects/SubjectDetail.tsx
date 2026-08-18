@@ -125,7 +125,7 @@ export function SubjectDetail({ subject }: SubjectDetailProps) {
                   {isDualFaculty ? "Faculty in Charge (Dual Faculty)" : "Faculty in Charge"}
                 </h2>
               </div>
-              <span className="text-2xs font-bold uppercase tracking-wider text-slate-500">
+              <span className="text-2xs font-bold uppercase tracking-wider text-slate-600">
                 {assignedTutors.length} Dedicated {assignedTutors.length === 1 ? "Instructor" : "Instructors"}
               </span>
             </div>
@@ -157,7 +157,7 @@ export function SubjectDetail({ subject }: SubjectDetailProps) {
                       <h3 className="font-heading text-base font-bold text-slate-900 truncate">
                         {tutor.name}
                       </h3>
-                      <p className="text-2xs text-slate-500 line-clamp-1">
+                      <p className="text-2xs text-slate-600 line-clamp-1">
                         {tutor.roleTitle}
                       </p>
                     </div>
@@ -253,18 +253,18 @@ export function SubjectDetail({ subject }: SubjectDetailProps) {
                         {module.title}
                       </h3>
                     </div>
-                    <p className="text-xs text-slate-500 leading-relaxed font-normal">
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
                       {module.description}
                     </p>
 
                     <div className="pt-2 border-t border-slate-100">
-                      <h4 className="text-2xs font-bold uppercase tracking-wider text-slate-400 mb-2">
+                      <h4 className="text-2xs font-bold uppercase tracking-wider text-slate-600 mb-2">
                         Core Topics Covered:
                       </h4>
                       <ul className="space-y-1.5 text-xs text-slate-700">
                         {module.topics.map((topic, topicIdx) => (
                           <li key={topicIdx} className="flex items-start gap-2">
-                            <span className="h-1.5 w-1.5 rounded-full bg-[#6BB640] shrink-0 mt-1.5" />
+                            <span className="h-1.5 w-1.5 rounded-full bg-[#579631] shrink-0 mt-1.5" />
                             <span className="leading-snug">{topic}</span>
                           </li>
                         ))}
@@ -276,7 +276,7 @@ export function SubjectDetail({ subject }: SubjectDetailProps) {
             </div>
 
             {/* Illustrative Curriculum Disclaimer */}
-            <div className="rounded-xl border border-slate-200 bg-slate-50 p-4 text-xs text-slate-500 leading-relaxed">
+            <div className="rounded-xl border border-slate-200 bg-slate-50 p-4 text-xs text-slate-600 leading-relaxed">
               <span className="font-semibold text-slate-700 block mb-0.5">Curriculum Scope Note:</span>
               {subject.curriculumNote}
             </div>
@@ -285,20 +285,20 @@ export function SubjectDetail({ subject }: SubjectDetailProps) {
           {/* 7. Suggested Learning Outcomes */}
           <section className="space-y-4">
             <div className="flex items-center gap-2 text-slate-900">
-              <CheckCircle2 className="h-5 w-5 text-[#6BB640]" />
+              <CheckCircle2 className="h-5 w-5 text-[#579631]" />
               <h2 className="font-heading text-xl sm:text-2xl font-bold tracking-tight">
                 Suggested Learning Outcomes
               </h2>
             </div>
 
             <div className="rounded-2xl border border-slate-200 bg-white p-6 sm:p-8 space-y-3 shadow-subtle">
-              <p className="text-xs sm:text-sm text-slate-500 font-medium mb-1">
+              <p className="text-xs sm:text-sm text-slate-600 font-medium mb-1">
                 Upon completing targeted modules in {subject.name}, students develop:
               </p>
               <div className="space-y-3">
                 {subject.learningOutcomes.map((outcome, idx) => (
                   <div key={idx} className="flex items-start gap-3 text-sm sm:text-base text-slate-700">
-                    <CheckCircle2 className="h-5 w-5 text-[#6BB640] shrink-0 mt-0.5" />
+                    <CheckCircle2 className="h-5 w-5 text-[#579631] shrink-0 mt-0.5" />
                     <span className="leading-relaxed font-normal">{outcome}</span>
                   </div>
                 ))}
@@ -347,7 +347,7 @@ export function SubjectDetail({ subject }: SubjectDetailProps) {
 
               {/* Faculty Summary */}
               <div>
-                <h4 className="text-2xs font-bold uppercase tracking-wider text-slate-500 mb-2">
+                <h4 className="text-2xs font-bold uppercase tracking-wider text-slate-600 mb-2">
                   Assigned Instructors
                 </h4>
                 <div className="space-y-2">
@@ -358,7 +358,7 @@ export function SubjectDetail({ subject }: SubjectDetailProps) {
                     >
                       <div>
                         <p className="text-xs font-bold text-slate-900">{tutor.name}</p>
-                        <p className="text-[11px] text-slate-500">{tutor.roleTitle}</p>
+                        <p className="text-[11px] text-slate-600">{tutor.roleTitle}</p>
                       </div>
                       <Button asChild variant="ghost" size="sm" className="text-xs text-[#0B4982] p-0 h-auto font-semibold">
                         <Link href={`/tutors/${tutor.slug}`}>
@@ -372,7 +372,7 @@ export function SubjectDetail({ subject }: SubjectDetailProps) {
 
               {/* Grade Band */}
               <div>
-                <h4 className="text-2xs font-bold uppercase tracking-wider text-slate-500 mb-1.5">
+                <h4 className="text-2xs font-bold uppercase tracking-wider text-slate-600 mb-1.5">
                   Target Grade Band
                 </h4>
                 <p className="text-xs font-semibold text-slate-800 bg-slate-50 p-2.5 rounded-lg border border-slate-100">
@@ -382,7 +382,7 @@ export function SubjectDetail({ subject }: SubjectDetailProps) {
 
               {/* Class Formats */}
               <div>
-                <h4 className="text-2xs font-bold uppercase tracking-wider text-slate-500 mb-2">
+                <h4 className="text-2xs font-bold uppercase tracking-wider text-slate-600 mb-2">
                   Learning Formats
                 </h4>
                 <div className="space-y-1.5 text-xs text-slate-700">
@@ -407,7 +407,7 @@ export function SubjectDetail({ subject }: SubjectDetailProps) {
                     <ArrowRight className="h-4 w-4" />
                   </Link>
                 </Button>
-                <p className="text-2xs text-center text-slate-500 font-normal">
+                <p className="text-2xs text-center text-slate-600 font-normal">
                   Diagnostic baseline review included
                 </p>
               </div>

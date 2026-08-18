@@ -71,7 +71,7 @@ export function MobileNavigation({ isOpen, onClose }: MobileNavigationProps) {
           <button
             type="button"
             onClick={onClose}
-            className="p-2 rounded-lg text-slate-500 hover:text-slate-900 hover:bg-slate-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0B4982] transition-colors"
+            className="p-2 rounded-lg text-slate-700 hover:text-slate-900 hover:bg-slate-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0B4982] transition-colors"
             aria-label="Close navigation menu"
           >
             <X className="h-5 w-5" />
@@ -80,7 +80,7 @@ export function MobileNavigation({ isOpen, onClose }: MobileNavigationProps) {
 
         {/* Drawer Navigation Links */}
         <div className="p-4 sm:p-5 space-y-1">
-          <span className="text-2xs font-bold uppercase tracking-wider text-slate-400 px-3 block mb-2">
+          <span className="text-2xs font-bold uppercase tracking-wider text-slate-600 px-3 block mb-2">
             Navigation
           </span>
           {navItems.map((item) => {
@@ -104,7 +104,7 @@ export function MobileNavigation({ isOpen, onClose }: MobileNavigationProps) {
                 )}
               >
                 <span>{item.label}</span>
-                <ArrowRight className="h-4 w-4 text-slate-400" />
+                <ArrowRight className="h-4 w-4 text-slate-500" />
               </Link>
             );
           })}
@@ -123,13 +123,13 @@ export function MobileNavigation({ isOpen, onClose }: MobileNavigationProps) {
             </Link>
           </Button>
 
-          <div className="pt-2 text-2xs text-slate-500 space-y-1">
-            <p className="flex items-center gap-1.5 font-medium">
+          <div className="pt-2 text-2xs text-slate-600 space-y-1">
+            <p className="flex items-center gap-1.5 font-medium text-slate-700">
               <Mail className="h-3 w-3 text-[#0B4982]" />
               <span>{siteConfig.contactEmail}</span>
             </p>
-            <p className="flex items-center gap-1.5 text-slate-400">
-              <Clock className="h-3 w-3 text-slate-400" />
+            <p className="flex items-center gap-1.5 text-slate-600">
+              <Clock className="h-3 w-3 text-slate-500" />
               <span>{siteConfig.academicHours}</span>
             </p>
           </div>

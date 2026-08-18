@@ -65,7 +65,7 @@ export function TutorProfile({ tutor }: TutorProfileProps) {
             </p>
 
             <div className="pt-2">
-              <h4 className="text-2xs font-bold uppercase tracking-wider text-slate-500 mb-3">
+              <h4 className="text-2xs font-bold uppercase tracking-wider text-slate-600 mb-3">
                 Core Pedagogical Focus Areas
               </h4>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -74,7 +74,7 @@ export function TutorProfile({ tutor }: TutorProfileProps) {
                     key={idx}
                     className="flex items-start gap-2.5 rounded-xl border border-slate-200 bg-white p-3.5 text-xs sm:text-sm text-slate-800 shadow-subtle"
                   >
-                    <CheckCircle2 className="h-4 w-4 text-[#6BB640] shrink-0 mt-0.5" />
+                    <CheckCircle2 className="h-4 w-4 text-[#579631] shrink-0 mt-0.5" />
                     <span className="leading-snug">{focus}</span>
                   </div>
                 ))}
@@ -127,13 +127,13 @@ export function TutorProfile({ tutor }: TutorProfileProps) {
             </div>
 
             <div className="rounded-2xl border border-slate-200 bg-white p-6 sm:p-8 space-y-3 shadow-subtle">
-              <p className="text-xs sm:text-sm text-slate-500 font-medium mb-1">
+              <p className="text-xs sm:text-sm text-slate-600 font-medium mb-1">
                 Every session with {tutor.name} follows a disciplined, student-centered structure:
               </p>
               <div className="space-y-3">
                 {tutor.whatStudentsCanExpect.map((item, idx) => (
                   <div key={idx} className="flex items-start gap-3 text-sm sm:text-base text-slate-700">
-                    <CheckCircle2 className="h-5 w-5 text-[#6BB640] shrink-0 mt-0.5" />
+                    <CheckCircle2 className="h-5 w-5 text-[#579631] shrink-0 mt-0.5" />
                     <span className="leading-relaxed font-normal">{item}</span>
                   </div>
                 ))}
@@ -143,8 +143,8 @@ export function TutorProfile({ tutor }: TutorProfileProps) {
 
           {/* Verification & Transparency Disclosure */}
           <section className="rounded-2xl border border-slate-200 bg-slate-50/50 p-6 space-y-2">
-            <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-slate-500">
-              <Info className="h-4 w-4 text-slate-400" />
+            <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-slate-600">
+              <Info className="h-4 w-4 text-slate-600" />
               <span>Academic Transparency &amp; Credential Disclosure</span>
             </div>
             <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
@@ -165,13 +165,13 @@ export function TutorProfile({ tutor }: TutorProfileProps) {
 
               {/* Curriculum Levels */}
               <div>
-                <h4 className="text-2xs font-bold uppercase tracking-wider text-slate-500 mb-2">
+                <h4 className="text-2xs font-bold uppercase tracking-wider text-slate-600 mb-2">
                   Curriculum Levels Covered
                 </h4>
                 <ul className="space-y-2 text-xs sm:text-sm text-slate-700">
                   {tutor.curriculumLevels.map((lvl, idx) => (
                     <li key={idx} className="flex items-start gap-2">
-                      <CheckCircle2 className="h-4 w-4 text-[#6BB640] shrink-0 mt-0.5" />
+                      <CheckCircle2 className="h-4 w-4 text-[#579631] shrink-0 mt-0.5" />
                       <span className="leading-snug">{lvl}</span>
                     </li>
                   ))}
@@ -180,7 +180,7 @@ export function TutorProfile({ tutor }: TutorProfileProps) {
 
               {/* Format Options */}
               <div>
-                <h4 className="text-2xs font-bold uppercase tracking-wider text-slate-500 mb-2">
+                <h4 className="text-2xs font-bold uppercase tracking-wider text-slate-600 mb-2">
                   Format Options
                 </h4>
                 <div className="space-y-1.5 text-xs sm:text-sm text-slate-700">
@@ -197,7 +197,7 @@ export function TutorProfile({ tutor }: TutorProfileProps) {
 
               {/* Availability Note */}
               <div>
-                <h4 className="text-2xs font-bold uppercase tracking-wider text-slate-500 mb-1.5">
+                <h4 className="text-2xs font-bold uppercase tracking-wider text-slate-600 mb-1.5">
                   Admissions Note
                 </h4>
                 <p className="text-xs text-slate-600 leading-relaxed">
@@ -217,7 +217,7 @@ export function TutorProfile({ tutor }: TutorProfileProps) {
                     <ArrowRight className="h-4 w-4" />
                   </Link>
                 </Button>
-                <p className="text-2xs text-center text-slate-500 font-normal">
+                <p className="text-2xs text-center text-slate-600 font-normal">
                   No registration fees required to enquire
                 </p>
               </div>

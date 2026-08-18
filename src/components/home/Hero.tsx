@@ -55,7 +55,7 @@ export function Hero() {
             </div>
 
             {/* Supporting Micro-Note */}
-            <div className="pt-2 text-xs sm:text-sm text-slate-500 font-medium">
+            <div className="pt-2 text-xs sm:text-sm text-slate-600 font-medium">
               Mathematics · Science · Social Science · English
             </div>
           </div>
@@ -91,7 +91,7 @@ export function Hero() {
 
                 {/* Connector */}
                 <div className="flex justify-center -my-1">
-                  <span className="text-xs text-slate-600">↓</span>
+                  <span className="text-xs text-slate-400">↓</span>
                 </div>
 
                 {/* Step 2: Subject & Need */}
@@ -110,7 +110,7 @@ export function Hero() {
 
                 {/* Connector */}
                 <div className="flex justify-center -my-1">
-                  <span className="text-xs text-slate-600">↓</span>
+                  <span className="text-xs text-slate-400">↓</span>
                 </div>
 
                 {/* Step 3: Dedicated Faculty Match */}

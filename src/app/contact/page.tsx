@@ -75,7 +75,7 @@ export default function ContactPage() {
           <div className="lg:col-span-8">
             <React.Suspense
               fallback={
-                <div className="flex min-h-[400px] items-center justify-center rounded-2xl border border-slate-200 bg-white p-12 text-slate-500">
+                <div className="flex min-h-[400px] items-center justify-center rounded-2xl border border-slate-200 bg-white p-12 text-slate-600">
                   <Loader2 className="h-6 w-6 animate-spin text-[#0B4982] mr-2" />
                   <span>Loading admissions form...</span>
                 </div>

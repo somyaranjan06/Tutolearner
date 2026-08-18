@@ -50,7 +50,7 @@ export function EditorialBrandSection() {
               className="flex flex-col justify-between pt-6 border-t-2 border-slate-900 group hover:border-[#0B4982] transition-colors duration-200"
             >
               <div className="space-y-4">
-                <span className="font-mono text-sm sm:text-base font-bold text-slate-400 group-hover:text-[#0B4982] transition-colors">
+                <span className="font-mono text-sm sm:text-base font-bold text-slate-600 group-hover:text-[#0B4982] transition-colors">
                   {item.number}
                 </span>
                 <h3 className="font-heading text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
@@ -59,7 +59,7 @@ export function EditorialBrandSection() {
                 <p className="text-base font-semibold text-slate-800 leading-snug">
                   {item.description}
                 </p>
-                <p className="text-sm text-slate-500 leading-relaxed font-normal">
+                <p className="text-sm text-slate-600 leading-relaxed font-normal">
                   {item.detail}
                 </p>
               </div>
