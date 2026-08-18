@@ -5,7 +5,12 @@ import { subjects, getSubjectBySlug, getAllSubjectSlugs } from "@/data/subjects"
 import { siteConfig, getCanonicalUrl } from "@/data/siteConfig";
 import { SubjectDetail } from "@/components/subjects/SubjectDetail";
 import { CTASection } from "@/components/common/CTASection";
-import { JsonLd, generateCourseSchema, generateFaqSchema } from "@/components/seo/JsonLd";
+import {
+  JsonLd,
+  generateCourseSchema,
+  generateFaqSchema,
+  generateBreadcrumbSchema,
+} from "@/components/seo/JsonLd";
 
 interface SubjectPageProps {
   params: Promise<{
@@ -28,7 +33,7 @@ export async function generateMetadata({
 
   if (!subject) {
     return {
-      title: "Subject Not Found",
+      title: "Subject Not Found | TutoLearner",
       description: "The requested curriculum subject is not available.",
     };
   }
@@ -37,13 +42,15 @@ export async function generateMetadata({
   const canonicalUrl = getCanonicalUrl(`/subjects/${subject.slug}`);
 
   return {
-    title: `${subject.name} Tutoring & Syllabus | TutoLearner Academy`,
-    description: `${subject.name} instruction led by ${facultyNames}. ${subject.description}`,
+    title: {
+      absolute: `${subject.name} Tutoring & Syllabus | TutoLearner`,
+    },
+    description: `${subject.name} academic guidance led by ${facultyNames}. ${subject.description}`,
     alternates: {
       canonical: canonicalUrl,
     },
     openGraph: {
-      title: `${subject.name} Curriculum & Mentorship | TutoLearner Academy`,
+      title: `${subject.name} Tutoring & Syllabus | TutoLearner`,
       description: `${subject.name} led by ${facultyNames}. First-principles conceptual mastery and diagnostic reviews.`,
       url: canonicalUrl,
       siteName: siteConfig.name,
@@ -59,7 +66,7 @@ export async function generateMetadata({
     },
     twitter: {
       card: "summary_large_image",
-      title: `${subject.name} Tutoring & Syllabus | TutoLearner Academy`,
+      title: `${subject.name} Tutoring & Syllabus | TutoLearner`,
       description: `${subject.name} instruction led by ${facultyNames}.`,
       images: [siteConfig.ogImage],
     },
@@ -76,11 +83,21 @@ export default async function SingleSubjectPage({ params }: SubjectPageProps) {
 
   const courseSchema = generateCourseSchema(subject, siteConfig.url);
   const faqSchema = generateFaqSchema(subject.faqs);
+  const breadcrumbSchema = generateBreadcrumbSchema(
+    [
+      { name: "Home", url: "/" },
+      { name: "Subjects", url: "/subjects" },
+      { name: subject.name, url: `/subjects/${subject.slug}` },
+    ],
+    siteConfig.url
+  );
 
   return (
     <div className="py-10 sm:py-16">
-      {/* Course and Subject FAQ Structured Data */}
-      <JsonLd data={[courseSchema, faqSchema]} />
+      {/* Course & FAQ & Breadcrumb Structured Data */}
+      <JsonLd data={courseSchema} />
+      <JsonLd data={faqSchema} />
+      <JsonLd data={breadcrumbSchema} />
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-16">
         {/* Full Subject Detail View */}

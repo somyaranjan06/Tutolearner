@@ -6,28 +6,34 @@ import { SectionHeading } from "@/components/common/SectionHeading";
 import { FAQAccordion } from "@/components/common/FAQAccordion";
 import { Breadcrumbs } from "@/components/common/Breadcrumbs";
 import { CTASection } from "@/components/common/CTASection";
-import { JsonLd, generateFaqSchema } from "@/components/seo/JsonLd";
+import {
+  JsonLd,
+  generateFaqSchema,
+  generateBreadcrumbSchema,
+} from "@/components/seo/JsonLd";
 import { HelpCircle } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Frequently Asked Questions | TutoLearner Academy",
+  title: {
+    absolute: "TutoLearner FAQ | Frequently Asked Questions",
+  },
   description:
-    "Find answers to common questions regarding our tutoring formats, tutor assignment, curriculum boards, trial evaluations, and scheduling.",
+    "Find clear answers to common questions regarding tutoring formats, tutor assignment, curriculum boards, trial evaluations, and scheduling at TutoLearner.",
   alternates: {
     canonical: getCanonicalUrl("/faq"),
   },
   openGraph: {
-    title: "Frequently Asked Questions | TutoLearner Academy",
+    title: "TutoLearner FAQ | Frequently Asked Questions",
     description:
-      "Find answers to common questions regarding our tutoring formats, tutor assignment, curriculum boards, trial evaluations, and scheduling.",
+      "Find clear answers to common questions regarding tutoring formats, tutor assignment, curriculum boards, trial evaluations, and scheduling.",
     url: getCanonicalUrl("/faq"),
     siteName: siteConfig.name,
-    images: [{ url: siteConfig.ogImage, width: 1200, height: 630, alt: "TutoLearner Academy FAQs" }],
+    images: [{ url: siteConfig.ogImage, width: 1200, height: 630, alt: "TutoLearner FAQs" }],
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Frequently Asked Questions | TutoLearner Academy",
+    title: "TutoLearner FAQ | Frequently Asked Questions",
     description: "Common questions about subjects, faculty, scheduling, and learning formats.",
     images: [siteConfig.ogImage],
   },
@@ -35,11 +41,19 @@ export const metadata: Metadata = {
 
 export default function FAQPage() {
   const faqSchemaData = generateFaqSchema(faqs);
+  const breadcrumbSchema = generateBreadcrumbSchema(
+    [
+      { name: "Home", url: "/" },
+      { name: "FAQ", url: "/faq" },
+    ],
+    siteConfig.url
+  );
 
   return (
     <div className="py-10 sm:py-16">
-      {/* FAQPage Structured Data */}
+      {/* Structured Data: FAQPage & Breadcrumbs */}
       <JsonLd data={faqSchemaData} />
+      <JsonLd data={breadcrumbSchema} />
 
       <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 space-y-12">
         <Breadcrumbs items={[{ label: "Frequently Asked Questions" }]} />

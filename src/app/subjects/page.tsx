@@ -6,16 +6,19 @@ import { SubjectGrid } from "@/components/subjects/SubjectGrid";
 import { SectionHeading } from "@/components/common/SectionHeading";
 import { Breadcrumbs } from "@/components/common/Breadcrumbs";
 import { CTASection } from "@/components/common/CTASection";
+import { JsonLd, generateBreadcrumbSchema } from "@/components/seo/JsonLd";
 
 export const metadata: Metadata = {
-  title: "Academic Curriculum & Subjects | Mathematics, Science, Social Science, English",
+  title: {
+    absolute: "TutoLearner Subjects | Mathematics, Science, English & Social Science",
+  },
   description:
-    "Explore our structured curriculum tracks in Mathematics, Science (Dual Faculty), Social Science, and English led by dedicated subject specialists.",
+    "Explore our structured curriculum tracks in Mathematics, Science, Social Science, and English led by dedicated subject specialists at TutoLearner.",
   alternates: {
     canonical: getCanonicalUrl("/subjects"),
   },
   openGraph: {
-    title: "Curriculum Directory & Subjects | TutoLearner Academy",
+    title: "TutoLearner Subjects | Mathematics, Science, English & Social Science",
     description:
       "Structured learning outcomes, syllabus module breakdowns, and assigned faculty across STEM, Social Sciences, and English.",
     url: getCanonicalUrl("/subjects"),
@@ -25,15 +28,24 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Curriculum Directory & Subjects | TutoLearner Academy",
+    title: "TutoLearner Subjects | Mathematics, Science, English & Social Science",
     description: "Mathematics, Science, Social Science, and English.",
     images: [siteConfig.ogImage],
   },
 };
 
 export default function SubjectsPage() {
+  const breadcrumbSchema = generateBreadcrumbSchema(
+    [
+      { name: "Home", url: "/" },
+      { name: "Subjects", url: "/subjects" },
+    ],
+    siteConfig.url
+  );
+
   return (
     <div className="py-10 sm:py-16">
+      <JsonLd data={breadcrumbSchema} />
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-12">
         <Breadcrumbs items={[{ label: "Curriculum Subjects" }]} />
 

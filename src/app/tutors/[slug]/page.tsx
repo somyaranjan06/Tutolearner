@@ -5,7 +5,11 @@ import { tutors, getTutorBySlug, getAllTutorSlugs } from "@/data/tutors";
 import { siteConfig, getCanonicalUrl } from "@/data/siteConfig";
 import { TutorProfile } from "@/components/tutors/TutorProfile";
 import { CTASection } from "@/components/common/CTASection";
-import { JsonLd, generatePersonSchema } from "@/components/seo/JsonLd";
+import {
+  JsonLd,
+  generatePersonSchema,
+  generateBreadcrumbSchema,
+} from "@/components/seo/JsonLd";
 
 interface TutorPageProps {
   params: Promise<{
@@ -28,7 +32,7 @@ export async function generateMetadata({
 
   if (!tutor) {
     return {
-      title: "Faculty Profile Not Found",
+      title: "Faculty Profile Not Found | TutoLearner",
       description: "The requested faculty profile is not available.",
     };
   }
@@ -37,19 +41,23 @@ export async function generateMetadata({
   const canonicalUrl = getCanonicalUrl(`/tutors/${tutor.slug}`);
 
   return {
-    title: `${tutor.name} – ${tutor.roleTitle} | TutoLearner Academy`,
-    description: `${tutor.name} leads academic instruction in ${subjectsList}. ${tutor.shortBio}`,
+    title: {
+      absolute: `${tutor.name} | ${tutor.roleTitle} – TutoLearner`,
+    },
+    description: `${tutor.name} provides personalized academic tutoring in ${subjectsList}. ${tutor.shortBio}`,
     alternates: {
       canonical: canonicalUrl,
     },
     openGraph: {
-      title: `${tutor.name} – ${tutor.roleTitle}`,
+      title: `${tutor.name} | ${tutor.roleTitle} – TutoLearner`,
       description: `${tutor.name} leads instruction in ${subjectsList}. First-principles conceptual clarity.`,
       url: canonicalUrl,
       siteName: siteConfig.name,
       images: [
         {
-          url: tutor.image,
+          url: tutor.image.startsWith("http")
+            ? tutor.image
+            : `${siteConfig.url}${tutor.image}`,
           width: 400,
           height: 400,
           alt: `Portrait of ${tutor.name}`,
@@ -59,9 +67,13 @@ export async function generateMetadata({
     },
     twitter: {
       card: "summary",
-      title: `${tutor.name} – ${tutor.roleTitle}`,
+      title: `${tutor.name} | ${tutor.roleTitle} – TutoLearner`,
       description: `${tutor.name} leads instruction in ${subjectsList}.`,
-      images: [tutor.image],
+      images: [
+        tutor.image.startsWith("http")
+          ? tutor.image
+          : `${siteConfig.url}${tutor.image}`,
+      ],
     },
   };
 }
@@ -76,11 +88,20 @@ export default async function SingleTutorPage({ params }: TutorPageProps) {
 
   const firstName = tutor.name.split(" ")[0];
   const personSchema = generatePersonSchema(tutor, siteConfig.url);
+  const breadcrumbSchema = generateBreadcrumbSchema(
+    [
+      { name: "Home", url: "/" },
+      { name: "Tutors", url: "/tutors" },
+      { name: tutor.name, url: `/tutors/${tutor.slug}` },
+    ],
+    siteConfig.url
+  );
 
   return (
     <div className="py-10 sm:py-16">
-      {/* Person Structured Data */}
+      {/* Structured Data: Person & Breadcrumbs */}
       <JsonLd data={personSchema} />
+      <JsonLd data={breadcrumbSchema} />
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-16">
         {/* Full Tutor Profile View */}

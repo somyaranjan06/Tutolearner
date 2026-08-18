@@ -5,7 +5,11 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { FloatingWhatsApp } from "@/components/common/FloatingWhatsApp";
 import { siteConfig } from "@/data/siteConfig";
-import { JsonLd, generateOrganizationSchema } from "@/components/seo/JsonLd";
+import {
+  JsonLd,
+  generateOrganizationSchema,
+  generateWebSiteSchema,
+} from "@/components/seo/JsonLd";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -29,10 +33,13 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: `${siteConfig.name} – Academic Tutoring Team`,
+    default: "TutoLearner – Personalized Learning & Online Tutoring",
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.description,
+  alternates: {
+    canonical: siteConfig.url,
+  },
   keywords: [
     "Academic Tutoring",
     "Somya Ranjan Naik",
@@ -42,6 +49,7 @@ export const metadata: Metadata = {
     "Science Tuition",
     "Social Science Tutoring",
     "English Language and Literature",
+    "TutoLearner",
     "TutoLearner Academy",
     "CBSE ICSE State Board Tutoring",
     "Diagnostic Academic Assessment",
@@ -59,7 +67,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: siteConfig.locale,
     url: siteConfig.url,
-    title: `${siteConfig.name} – Academic Tutoring Team`,
+    title: "TutoLearner – Personalized Learning & Online Tutoring",
     description: siteConfig.description,
     siteName: siteConfig.name,
     images: [
@@ -73,7 +81,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: `${siteConfig.name} – Academic Tutoring Team`,
+    title: "TutoLearner – Personalized Learning & Online Tutoring",
     description: siteConfig.description,
     images: [siteConfig.ogImage],
     creator: siteConfig.twitterHandle,
@@ -97,11 +105,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   const organizationSchema = generateOrganizationSchema(siteConfig.url);
+  const websiteSchema = generateWebSiteSchema(siteConfig.url);
 
   return (
     <html lang="en" className={`${inter.variable} ${outfit.variable} scroll-smooth`}>
       <head>
         <JsonLd data={organizationSchema} />
+        <JsonLd data={websiteSchema} />
       </head>
       <body className="font-sans min-h-screen flex flex-col bg-white text-slate-900 selection:bg-blue-100 selection:text-[#0B4982]">
         <a

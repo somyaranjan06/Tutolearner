@@ -5,6 +5,7 @@ import { siteConfig, getCanonicalUrl } from "@/data/siteConfig";
 import { Breadcrumbs } from "@/components/common/Breadcrumbs";
 import { CTASection } from "@/components/common/CTASection";
 import { Card, CardContent } from "@/components/ui/card";
+import { JsonLd, generateBreadcrumbSchema } from "@/components/seo/JsonLd";
 import {
   BrainCircuit,
   Target,
@@ -21,14 +22,16 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Teaching Method & Educational Framework | TutoLearner Academy",
+  title: {
+    absolute: "TutoLearner Methodology | How We Teach",
+  },
   description:
-    "Explore our structured 5-principle learning philosophy and 4-step student roadmap. First-principles understanding, active discourse, and diagnostic reviews.",
+    "Explore our 5-principle learning philosophy and 4-step student roadmap designed for concept clarity, diagnostic reviews, and personalized learning.",
   alternates: {
     canonical: getCanonicalUrl("/methodology"),
   },
   openGraph: {
-    title: "Teaching Method & Learning Philosophy | TutoLearner Academy",
+    title: "TutoLearner Methodology | How We Teach",
     description:
       "Structured concept mastery in STEM, Social Science, and English. Learn about our 5 core principles and diagnostic baseline process.",
     url: getCanonicalUrl("/methodology"),
@@ -38,7 +41,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Teaching Method & Learning Philosophy | TutoLearner Academy",
+    title: "TutoLearner Methodology | How We Teach",
     description: "Structured concept mastery in STEM, Social Science, and English.",
     images: [siteConfig.ogImage],
   },
@@ -57,8 +60,17 @@ const iconMap: Record<string, LucideIcon> = {
 };
 
 export default function MethodologyPage() {
+  const breadcrumbSchema = generateBreadcrumbSchema(
+    [
+      { name: "Home", url: "/" },
+      { name: "Methodology", url: "/methodology" },
+    ],
+    siteConfig.url
+  );
+
   return (
     <div className="py-10 sm:py-16">
+      <JsonLd data={breadcrumbSchema} />
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-16">
         <Breadcrumbs items={[{ label: "Teaching Method" }]} />
 

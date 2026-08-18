@@ -13,16 +13,19 @@ import {
   Loader2,
 } from "lucide-react";
 import { siteConfig, getCanonicalUrl } from "@/data/siteConfig";
+import { JsonLd, generateBreadcrumbSchema } from "@/components/seo/JsonLd";
 
 export const metadata: Metadata = {
-  title: "Admissions & Consultation Enquiry | TutoLearner Academy",
+  title: {
+    absolute: "Contact TutoLearner | Enquiries & Learning Support",
+  },
   description:
-    "Submit an enquiry for structured tutoring in Mathematics, Science, Social Science, or English with Somya Ranjan Naik, Shiwangi, and Shreya Tiwari. Initial diagnostic review included.",
+    "Submit an enquiry for personalized academic tutoring in Mathematics, Science, Social Science, or English with our dedicated faculty at TutoLearner.",
   alternates: {
     canonical: getCanonicalUrl("/contact"),
   },
   openGraph: {
-    title: "Student Admissions & Consultation | TutoLearner Academy",
+    title: "Contact TutoLearner | Enquiries & Learning Support",
     description:
       "Direct enquiry for Mathematics, Science, Social Science, and English tutoring. Small batches & 1-on-1 personalized guidance.",
     url: getCanonicalUrl("/contact"),
@@ -32,7 +35,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Student Admissions & Consultation | TutoLearner Academy",
+    title: "Contact TutoLearner | Enquiries & Learning Support",
     description: "Connect with our teaching faculty for structured academic tutoring.",
     images: [siteConfig.ogImage],
     creator: siteConfig.twitterHandle,
@@ -40,8 +43,17 @@ export const metadata: Metadata = {
 };
 
 export default function ContactPage() {
+  const breadcrumbSchema = generateBreadcrumbSchema(
+    [
+      { name: "Home", url: "/" },
+      { name: "Contact", url: "/contact" },
+    ],
+    siteConfig.url
+  );
+
   return (
     <div className="py-10 sm:py-16 bg-slate-50/40">
+      <JsonLd data={breadcrumbSchema} />
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-10">
         <Breadcrumbs items={[{ label: "Admissions & Enquiry" }]} />
 

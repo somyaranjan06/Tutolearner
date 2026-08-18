@@ -16,14 +16,14 @@ import { siteConfig, getCanonicalUrl } from "@/data/siteConfig";
 import { faqs } from "@/data/faqs";
 
 export const metadata: Metadata = {
-  title: "TutoLearner – Personalized Learning, Your Way",
+  title: "TutoLearner | Personalized Learning & Online Tutoring",
   description:
-    "TutoLearner connects students with personalized academic guidance, subject-focused tutoring, and learning resources designed around how they learn. Mathematics, Science, Social Science, and English.",
+    "TutoLearner connects students with personalized academic guidance, subject-focused tutoring, and learning resources designed around how they learn in Mathematics, Science, Social Science, and English.",
   alternates: {
     canonical: getCanonicalUrl("/"),
   },
   openGraph: {
-    title: "TutoLearner – Personalized Learning, Your Way",
+    title: "TutoLearner | Personalized Learning & Online Tutoring",
     description:
       "Subject-focused academic guidance in Mathematics, Science, Social Science, and English led by Somya Ranjan Naik, Shiwangi, and Shreya Tiwari.",
     url: getCanonicalUrl("/"),
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "TutoLearner – Personalized Learning, Your Way",
+    title: "TutoLearner | Personalized Learning & Online Tutoring",
     description: "Utilize Resources. Deliver Excellence.",
     images: [siteConfig.ogImage],
   },

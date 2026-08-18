@@ -6,17 +6,20 @@ import { TutorGrid } from "@/components/tutors/TutorGrid";
 import { SectionHeading } from "@/components/common/SectionHeading";
 import { Breadcrumbs } from "@/components/common/Breadcrumbs";
 import { CTASection } from "@/components/common/CTASection";
+import { JsonLd, generateBreadcrumbSchema } from "@/components/seo/JsonLd";
 import { ShieldCheck } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Our Academic Faculty | Somya Ranjan Naik, Shiwangi, Shreya Tiwari",
+  title: {
+    absolute: "TutoLearner Tutors | Meet Our Tutors",
+  },
   description:
-    "Meet our 3 dedicated educators: Somya Ranjan Naik (Maths & Science), Shiwangi (Social Science), and Shreya Tiwari (Science & English). First-principles pedagogy & diagnostic reviews.",
+    "Meet our dedicated faculty: Somya Ranjan Naik (Mathematics & Science), Shiwangi (Social Science), and Shreya Tiwari (Science & English). First-principles tutoring and concept clarity.",
   alternates: {
     canonical: getCanonicalUrl("/tutors"),
   },
   openGraph: {
-    title: "Teaching Faculty Directory | TutoLearner Academy",
+    title: "TutoLearner Tutors | Meet Our Tutors",
     description:
       "Meet Somya Ranjan Naik, Shiwangi, and Shreya Tiwari. Specialized academic instruction across STEM, Humanities, and English.",
     url: getCanonicalUrl("/tutors"),
@@ -26,15 +29,24 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Teaching Faculty Directory | TutoLearner Academy",
+    title: "TutoLearner Tutors | Meet Our Tutors",
     description: "Somya Ranjan Naik, Shiwangi, and Shreya Tiwari.",
     images: [siteConfig.ogImage],
   },
 };
 
 export default function TutorsPage() {
+  const breadcrumbSchema = generateBreadcrumbSchema(
+    [
+      { name: "Home", url: "/" },
+      { name: "Tutors", url: "/tutors" },
+    ],
+    siteConfig.url
+  );
+
   return (
     <div className="py-10 sm:py-16">
+      <JsonLd data={breadcrumbSchema} />
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-12">
         <Breadcrumbs items={[{ label: "Teaching Faculty" }]} />
 

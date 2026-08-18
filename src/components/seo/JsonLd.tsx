@@ -13,13 +13,31 @@ export function JsonLd({ data }: JsonLdProps) {
   );
 }
 
+export function generateWebSiteSchema(siteUrl: string) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "TutoLearner",
+    alternateName: "TutoLearner Academy",
+    url: siteUrl,
+    description:
+      "Personalized academic guidance, subject-focused tutoring, and learning resources designed around how students learn in Mathematics, Science, Social Science, and English.",
+    publisher: {
+      "@type": "EducationalOrganization",
+      name: "TutoLearner",
+      url: siteUrl,
+    },
+  };
+}
+
 export function generateOrganizationSchema(siteUrl: string) {
   return {
     "@context": "https://schema.org",
     "@type": "EducationalOrganization",
-    name: "TutoLearner Academy",
+    name: "TutoLearner",
+    alternateName: "TutoLearner Academy",
     url: siteUrl,
-    logo: `${siteUrl}/icon.svg`,
+    logo: `${siteUrl}/images/branding/logo_Tutolearner.jpeg`,
     description:
       "A dedicated academic tutoring collective led by Somya Ranjan Naik, Shiwangi, and Shreya Tiwari. Providing structured instruction in Mathematics, Science, Social Science, and English.",
     address: {
@@ -30,15 +48,21 @@ export function generateOrganizationSchema(siteUrl: string) {
     contactPoint: {
       "@type": "ContactPoint",
       email: "enquiry@tutolearner.edu",
+      telephone: "+91-9827118949",
       contactType: "Admissions & Student Support",
       availableLanguage: ["English", "Hindi"],
     },
+    sameAs: [
+      "https://www.facebook.com/people/Tutolearner/61593222653583/",
+      "https://www.instagram.com/tutolearner/",
+      "https://wa.me/919827118949"
+    ],
     knowsAbout: ["Mathematics", "Science", "Social Science", "English"],
     member: [
       {
         "@type": "Person",
         name: "Somya Ranjan Naik",
-        jobTitle: "Lead Faculty – Mathematics & Science",
+        jobTitle: "Founder | Mathematics & Science Tutor",
         url: `${siteUrl}/tutors/somya-ranjan-naik`,
       },
       {
@@ -57,37 +81,63 @@ export function generateOrganizationSchema(siteUrl: string) {
   };
 }
 
-export function generatePersonSchema(tutor: {
-  name: string;
-  roleTitle: string;
-  slug: string;
-  image: string;
-  shortBio: string;
-  subjects: string[];
-}, siteUrl: string) {
+export function generateBreadcrumbSchema(
+  items: Array<{ name: string; url: string }>,
+  siteUrl: string
+) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: items.map((item, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: item.name,
+      item: item.url.startsWith("http")
+        ? item.url
+        : `${siteUrl}${item.url.startsWith("/") ? item.url : `/${item.url}`}`,
+    })),
+  };
+}
+
+export function generatePersonSchema(
+  tutor: {
+    name: string;
+    roleTitle: string;
+    slug: string;
+    image: string;
+    shortBio: string;
+    subjects: string[];
+    linkedin?: string;
+  },
+  siteUrl: string
+) {
   return {
     "@context": "https://schema.org",
     "@type": "Person",
     name: tutor.name,
     jobTitle: tutor.roleTitle,
     url: `${siteUrl}/tutors/${tutor.slug}`,
-    image: `${siteUrl}${tutor.image}`,
+    image: tutor.image.startsWith("http") ? tutor.image : `${siteUrl}${tutor.image}`,
     description: tutor.shortBio,
     worksFor: {
       "@type": "EducationalOrganization",
-      name: "TutoLearner Academy",
+      name: "TutoLearner",
       url: siteUrl,
     },
+    sameAs: tutor.linkedin ? [tutor.linkedin] : undefined,
     knowsAbout: tutor.subjects,
   };
 }
 
-export function generateCourseSchema(subject: {
-  name: string;
-  slug: string;
-  description: string;
-  tutor: string[];
-}, siteUrl: string) {
+export function generateCourseSchema(
+  subject: {
+    name: string;
+    slug: string;
+    description: string;
+    tutor: string[];
+  },
+  siteUrl: string
+) {
   return {
     "@context": "https://schema.org",
     "@type": "Course",
@@ -95,7 +145,7 @@ export function generateCourseSchema(subject: {
     description: subject.description,
     provider: {
       "@type": "EducationalOrganization",
-      name: "TutoLearner Academy",
+      name: "TutoLearner",
       url: siteUrl,
     },
     url: `${siteUrl}/subjects/${subject.slug}`,

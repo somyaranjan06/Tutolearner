@@ -22,7 +22,7 @@ export const siteConfig = {
   manifesto: "Utilize Resources. Deliver Excellence.",
   description:
     "TutoLearner connects students with personalized academic guidance, subject-focused tutoring, and learning resources designed around how they learn.",
-  url: process.env.NEXT_PUBLIC_SITE_URL || "https://tutolearner.vercel.app",
+  url: process.env.NEXT_PUBLIC_SITE_URL || "https://tutolearner.in",
   ogImage: "/images/og-banner.svg",
   contactEmail: "enquiry@tutolearner.edu",
   contactPhone: "+91 9827118949",
