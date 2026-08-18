@@ -44,6 +44,8 @@ export const enquirySchema = z.object({
     .string()
     .min(10, "Please describe the student's learning goals or challenges (at least 10 characters).")
     .max(1000, "Message cannot exceed 1000 characters."),
+  // Hidden honeypot field to trap automated spambots (must remain empty)
+  hp_website: z.string().optional(),
 });
 
 export type EnquiryFormData = z.infer<typeof enquirySchema>;
@@ -54,4 +56,9 @@ export interface EnquirySubmissionResult {
   timestamp: string;
   data: EnquiryFormData;
   message: string;
+  notifications?: {
+    sheets: "stored" | "failed" | "not_configured";
+    email: "sent" | "failed" | "not_configured";
+    whatsapp: "sent" | "failed" | "not_configured";
+  };
 }

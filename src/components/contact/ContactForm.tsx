@@ -68,12 +68,14 @@ export function ContactForm() {
     return found ? found.name : "Somya Ranjan Naik";
   }, [tutorParam]);
 
+  const [serverError, setServerError] = React.useState<string | null>(null);
+
   const {
     register,
     handleSubmit,
     control,
-    getValues,
     setValue,
+    getValues,
     reset,
     formState: { errors },
   } = useForm<EnquiryFormData>({
@@ -88,6 +90,7 @@ export function ContactForm() {
       preferredTutor: initialTutor,
       preferredMode: "online",
       message: "",
+      hp_website: "",
     },
   });
 
@@ -108,6 +111,7 @@ export function ContactForm() {
 
   const onSubmit = async (data: EnquiryFormData) => {
     setIsSubmitting(true);
+    setServerError(null);
     try {
       const response = await fetch("/api/enquiry", {
         method: "POST",
@@ -115,30 +119,22 @@ export function ContactForm() {
         body: JSON.stringify(data),
       });
 
-      if (response.ok) {
-        const result: EnquirySubmissionResult = await response.json();
+      const result = await response.json().catch(() => null);
+
+      if (response.ok && result && result.success === true) {
         setSubmissionResult(result);
       } else {
-        // Fallback simulated submission
-        const refId = generateFallbackReferenceId();
-        setSubmissionResult({
-          success: true,
-          referenceId: refId,
-          timestamp: new Date().toISOString(),
-          data,
-          message: "Enquiry logged successfully.",
-        });
+        const errorMsg =
+          result?.message ||
+          result?.error ||
+          "We encountered an issue recording your consultation request. Please retry or message us on WhatsApp (+91 9827118949).";
+        setServerError(errorMsg);
       }
-    } catch {
-      // Local fallback
-      const refId = generateFallbackReferenceId();
-      setSubmissionResult({
-        success: true,
-        referenceId: refId,
-        timestamp: new Date().toISOString(),
-        data,
-        message: "Enquiry logged successfully.",
-      });
+    } catch (err) {
+      console.error("Submission network error:", err);
+      setServerError(
+        "Network connection issue. Please verify your internet connection and retry, or message us directly on WhatsApp (+91 9827118949)."
+      );
     } finally {
       setIsSubmitting(false);
     }
@@ -146,6 +142,7 @@ export function ContactForm() {
 
   const handleResetForm = () => {
     setSubmissionResult(null);
+    setServerError(null);
     reset({
       fullName: "",
       userRole: "parent",
@@ -156,6 +153,7 @@ export function ContactForm() {
       preferredTutor: "Somya Ranjan Naik",
       preferredMode: "online",
       message: "",
+      hp_website: "",
     });
   };
 
@@ -280,8 +278,57 @@ export function ContactForm() {
         </p>
       </div>
 
-      <CardContent className="p-5 sm:p-8">
+      <CardContent className="p-5 sm:p-8 space-y-6">
+        {/* Real Server Error Alert (Never shows fake success) */}
+        {serverError && (
+          <div
+            role="alert"
+            className="rounded-2xl border border-rose-200 bg-rose-50/80 p-4 sm:p-5 text-rose-900 space-y-3"
+          >
+            <div className="flex items-start gap-3">
+              <AlertCircle className="h-5 w-5 text-rose-600 shrink-0 mt-0.5" />
+              <div className="space-y-1">
+                <p className="font-bold text-sm text-rose-900">
+                  Submission Notice
+                </p>
+                <p className="text-xs sm:text-sm text-rose-800 leading-relaxed">
+                  {serverError}
+                </p>
+              </div>
+            </div>
+            <div className="pt-2 border-t border-rose-200/60 flex flex-wrap items-center justify-between gap-2 text-xs">
+              <a
+                href="https://wa.me/919827118949"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-bold text-[#075E54] hover:underline inline-flex items-center gap-1.5"
+              >
+                <span>Chat directly on WhatsApp (+91 9827118949)</span>
+              </a>
+              <button
+                type="button"
+                onClick={() => setServerError(null)}
+                className="text-xs font-semibold text-rose-700 hover:text-rose-900 underline"
+              >
+                Dismiss &amp; Retry
+              </button>
+            </div>
+          </div>
+        )}
+
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-6" noValidate>
+          {/* Invisible Honeypot Spam Trap (must stay empty) */}
+          <div className="sr-only" aria-hidden="true" style={{ display: "none" }}>
+            <label htmlFor="hp_website">Please leave this field empty</label>
+            <input
+              id="hp_website"
+              type="text"
+              tabIndex={-1}
+              autoComplete="off"
+              {...register("hp_website")}
+            />
+          </div>
+
           {/* Submitting as: Parent / Student */}
           <div>
             <Label className="block mb-2 text-2xs font-bold uppercase tracking-wider text-slate-600">
