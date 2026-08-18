@@ -62,7 +62,7 @@ export function generateOrganizationSchema(siteUrl: string) {
       {
         "@type": "Person",
         name: "Somya Ranjan Naik",
-        jobTitle: "Founder | Mathematics & Science Tutor",
+        jobTitle: "Founder & Educator | Lead Faculty – Mathematics & Science",
         url: `${siteUrl}/tutors/somya-ranjan-naik`,
       },
       {
@@ -111,21 +111,29 @@ export function generatePersonSchema(
   },
   siteUrl: string
 ) {
+  const isFounder = tutor.slug === "somya-ranjan-naik";
+  const jobTitle = isFounder
+    ? "Founder & Educator | Lead Faculty – Mathematics & Science"
+    : tutor.roleTitle;
+
   return {
     "@context": "https://schema.org",
-    "@type": "Person",
-    name: tutor.name,
-    jobTitle: tutor.roleTitle,
-    url: `${siteUrl}/tutors/${tutor.slug}`,
-    image: tutor.image.startsWith("http") ? tutor.image : `${siteUrl}${tutor.image}`,
-    description: tutor.shortBio,
-    worksFor: {
-      "@type": "EducationalOrganization",
-      name: "TutoLearner",
-      url: siteUrl,
+    "@type": "ProfilePage",
+    mainEntity: {
+      "@type": "Person",
+      name: tutor.name,
+      jobTitle,
+      url: `${siteUrl}/tutors/${tutor.slug}`,
+      image: tutor.image.startsWith("http") ? tutor.image : `${siteUrl}${tutor.image}`,
+      description: tutor.shortBio,
+      worksFor: {
+        "@type": "EducationalOrganization",
+        name: "TutoLearner",
+        url: siteUrl,
+      },
+      sameAs: tutor.linkedin ? [tutor.linkedin] : undefined,
+      knowsAbout: tutor.subjects,
     },
-    sameAs: tutor.linkedin ? [tutor.linkedin] : undefined,
-    knowsAbout: tutor.subjects,
   };
 }
 
