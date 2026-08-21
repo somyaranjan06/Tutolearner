@@ -268,13 +268,13 @@ export function ContactForm() {
       <div className="bg-[#071F36] px-5 py-6 sm:px-8 text-white">
         <div className="flex items-center gap-2 text-2xs font-bold uppercase tracking-wider text-[#7ECB51] mb-1">
           <Sparkles className="h-3.5 w-3.5 text-[#6BB640]" />
-          <span>Direct Admissions Desk</span>
+          <span>Complimentary Assessment Desk</span>
         </div>
         <h2 className="font-heading text-lg sm:text-xl md:text-2xl font-bold tracking-tight text-white">
-          Student Consultation &amp; Admissions Form
+          Student Assessment &amp; Consultation Form
         </h2>
         <p className="text-xs sm:text-sm text-slate-300 mt-1 font-normal leading-relaxed">
-          Please fill in the details below. We will coordinate directly with Somya Ranjan Naik, Shiwangi, or Shreya Tiwari.
+          Please fill in the details below. Our academic team will review your child&apos;s learning needs and coordinate the next step with you.
         </p>
       </div>
 
@@ -566,12 +566,12 @@ export function ContactForm() {
             {isSubmitting ? (
               <>
                 <Loader2 className="h-4 w-4 animate-spin" />
-                <span>Submitting Consultation Request...</span>
+                <span>Booking Complimentary Assessment...</span>
               </>
             ) : (
               <>
                 <Send className="h-4 w-4" />
-                <span>Submit Student Consultation Request</span>
+                <span>Book My Complimentary Assessment</span>
               </>
             )}
           </Button>

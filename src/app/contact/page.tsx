@@ -55,18 +55,18 @@ export default function ContactPage() {
     <div className="py-10 sm:py-16 bg-slate-50/40">
       <JsonLd data={breadcrumbSchema} />
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-10">
-        <Breadcrumbs items={[{ label: "Admissions & Enquiry" }]} />
+        <Breadcrumbs items={[{ label: "Complimentary Assessment" }]} />
 
         {/* Page Hero Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4">
           <span className="inline-flex items-center text-xs font-bold tracking-wider uppercase text-[#0B4982] bg-blue-50 px-3.5 py-1 rounded-full border border-blue-200/80 shadow-xs">
-            Admissions Desk
+            COMPLIMENTARY STUDENT ASSESSMENT
           </span>
           <h1 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-900 leading-tight">
-            Begin Your Child&apos;s Academic Mentorship
+            Book Your Child&apos;s Complimentary Assessment
           </h1>
           <p className="text-base sm:text-lg text-slate-600 leading-relaxed font-normal">
-            Submit the enquiry form below. Our academic coordinator will review your grade level and subject goals with Somya Ranjan Naik, Shiwangi, or Shreya Tiwari and contact you within 24 hours.
+            Tell us a little about your child&apos;s learning needs. We&apos;ll review the information and help you find the right 1-on-1 tuition approach for them.
           </p>
         </div>
 
@@ -77,7 +77,7 @@ export default function ContactPage() {
               fallback={
                 <div className="flex min-h-[400px] items-center justify-center rounded-2xl border border-slate-200 bg-white p-12 text-slate-600">
                   <Loader2 className="h-6 w-6 animate-spin text-[#0B4982] mr-2" />
-                  <span>Loading admissions form...</span>
+                  <span>Loading assessment form...</span>
                 </div>
               }
             >
@@ -92,7 +92,7 @@ export default function ContactPage() {
               <CardContent className="p-6 space-y-4">
                 <h2 className="font-heading font-bold text-base text-slate-900 flex items-center gap-2">
                   <CalendarCheck className="h-4 w-4 text-[#0B4982]" />
-                  <span>Admissions Consultation Process</span>
+                  <span>Assessment Process</span>
                 </h2>
 
                 <ol className="space-y-3.5 text-xs sm:text-sm text-slate-600">
@@ -101,8 +101,8 @@ export default function ContactPage() {
                       1
                     </span>
                     <div>
-                      <strong className="text-slate-900 block font-semibold">Form Submission:</strong>
-                      <span>Select student grade, subject requirements, and preferred tutor.</span>
+                      <strong className="text-slate-900 block font-semibold">Submit Your Details</strong>
+                      <span>Share your child&apos;s grade, subject and learning needs.</span>
                     </div>
                   </li>
 
@@ -111,8 +111,8 @@ export default function ContactPage() {
                       2
                     </span>
                     <div>
-                      <strong className="text-slate-900 block font-semibold">Faculty Review:</strong>
-                      <span>Coordinator confirms schedule availability with the assigned tutor.</span>
+                      <strong className="text-slate-900 block font-semibold">Tutor Review</strong>
+                      <span>Our team reviews the information and considers the most suitable tutor and learning approach.</span>
                     </div>
                   </li>
 
@@ -121,8 +121,8 @@ export default function ContactPage() {
                       3
                     </span>
                     <div>
-                      <strong className="text-slate-900 block font-semibold">Diagnostic Baseline:</strong>
-                      <span>Initial evaluation session to assess concepts and outline a study roadmap.</span>
+                      <strong className="text-slate-900 block font-semibold">Complimentary Assessment</strong>
+                      <span>We assess your child&apos;s current learning level and identify areas that may need attention.</span>
                     </div>
                   </li>
                 </ol>
@@ -134,7 +134,7 @@ export default function ContactPage() {
               <CardContent className="p-6 space-y-4">
                 <h2 className="font-heading font-bold text-base text-slate-900 flex items-center gap-2">
                   <PhoneCall className="h-4 w-4 text-[#0B4982]" />
-                  <span>Admissions Office &amp; Hours</span>
+                  <span>TutoLearner Support</span>
                 </h2>
 
                 <ul className="space-y-3 text-xs sm:text-sm text-slate-600">
