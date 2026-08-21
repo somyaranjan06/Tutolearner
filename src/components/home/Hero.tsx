@@ -2,6 +2,8 @@ import * as React from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { socialLinks } from "@/data/siteConfig";
+import { WhatsAppIcon } from "@/components/common/SocialIcons";
 
 export function Hero() {
   return (
@@ -16,16 +18,16 @@ export function Hero() {
             {/* Brand Positioning Tag */}
             <div className="inline-flex items-center gap-2 rounded-full border border-blue-200/70 bg-blue-50/60 px-3.5 py-1 text-2xs font-semibold uppercase tracking-wider text-slate-800 mx-auto lg:mx-0 shadow-xs">
               <span className="h-2 w-2 rounded-full bg-[#6BB640]" />
-              <span className="font-bold text-[#0B4982]">Personalized Learning, Your Way.</span>
+              <span className="font-bold text-[#0B4982]">Complimentary Student Assessment</span>
             </div>
 
             {/* Main Headline */}
             <div className="space-y-4">
               <h1 className="font-heading text-4xl sm:text-5xl md:text-5.5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 leading-[1.08]">
-                Learning should work for the learner.
+                Personalized 1-on-1 Tuition for Every Learner
               </h1>
               <p className="mx-auto lg:mx-0 max-w-2xl text-base sm:text-lg md:text-xl text-slate-600 leading-relaxed font-normal">
-                TutoLearner connects students with personalized academic guidance, subject-focused tutoring, and learning resources designed around how they learn.
+                Start with a complimentary student assessment to understand your child’s learning needs and find the right approach for them.
               </p>
             </div>
 
@@ -36,8 +38,8 @@ export function Hero() {
                 size="lg"
                 className="bg-[#0B4982] hover:bg-[#083A68] text-white font-semibold shadow-subtle gap-2 text-sm sm:text-base py-3.5 px-7 rounded-xl transition-all duration-200"
               >
-                <Link href="/tutors">
-                  <span>Find Your Tutor</span>
+                <Link href="/contact">
+                  <span>Book Your Free Assessment</span>
                   <ArrowRight className="h-4 w-4" />
                 </Link>
               </Button>
@@ -46,17 +48,23 @@ export function Hero() {
                 asChild
                 variant="outline"
                 size="lg"
-                className="border-slate-200 bg-white hover:bg-blue-50/60 hover:text-[#0B4982] hover:border-blue-200 text-slate-800 font-semibold text-sm sm:text-base py-3.5 px-7 rounded-xl transition-all duration-200"
+                className="border-slate-200 bg-white hover:bg-emerald-50/60 hover:text-[#075E54] hover:border-emerald-200 text-slate-800 font-semibold text-sm sm:text-base py-3.5 px-7 rounded-xl transition-all duration-200 gap-2"
               >
-                <Link href="/subjects">
-                  <span>Explore Subjects</span>
-                </Link>
+                <a
+                  href={socialLinks.whatsapp}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Talk to Us on WhatsApp (+91 9827118949)"
+                >
+                  <WhatsAppIcon className="h-4.5 w-4.5 text-[#25D366] fill-current shrink-0" />
+                  <span>Talk to Us on WhatsApp</span>
+                </a>
               </Button>
             </div>
 
-            {/* Supporting Micro-Note */}
-            <div className="pt-2 text-xs sm:text-sm text-slate-600 font-medium">
-              Mathematics · Science · Social Science · English
+            {/* Supporting Trust Line */}
+            <div className="pt-2 text-xs sm:text-sm text-slate-700 font-medium tracking-wide">
+              Grades 1–12 • 1-on-1 Tuition • Personalized Learning • Online Classes
             </div>
           </div>
 
@@ -83,7 +91,7 @@ export function Hero() {
                     </span>
                     <div>
                       <p className="text-xs font-bold text-white">The Student</p>
-                      <p className="text-[11px] text-slate-400">Unique pace, questions &amp; learning style</p>
+                      <p className="text-[11px] text-slate-400">Grades 1–12 • Individual learning pace</p>
                     </div>
                   </div>
                   <span className="text-2xs text-slate-400 font-mono">Learner</span>
@@ -120,7 +128,7 @@ export function Hero() {
                       03
                     </span>
                     <div>
-                      <p className="text-xs font-bold text-white">Subject-Expert Tutor</p>
+                      <p className="text-xs font-bold text-white">1-on-1 Expert Faculty</p>
                       <p className="text-[11px] text-slate-300">Somya · Shiwangi · Shreya</p>
                     </div>
                   </div>
@@ -149,8 +157,8 @@ export function Hero() {
 
               {/* Diagram Footer */}
               <div className="mt-6 pt-4 border-t border-slate-800 flex items-center justify-between text-2xs text-slate-400">
-                <span>Personalized Tutoring</span>
-                <span className="text-[#7CC5FB] font-semibold">1-on-1 &amp; Small Batches</span>
+                <span>Personalized 1-on-1 Tuition</span>
+                <span className="text-[#7CC5FB] font-semibold">Grades 1–12 Online Classes</span>
               </div>
             </div>
           </div>
