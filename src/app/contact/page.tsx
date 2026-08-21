@@ -11,6 +11,7 @@ import {
   CalendarCheck,
   PhoneCall,
   Loader2,
+  Sparkles,
 } from "lucide-react";
 import { siteConfig, getCanonicalUrl } from "@/data/siteConfig";
 import { JsonLd, generateBreadcrumbSchema } from "@/components/seo/JsonLd";
@@ -87,7 +88,54 @@ export default function ContactPage() {
 
           {/* Right Column: Information & Process (4 cols) */}
           <div className="lg:col-span-4 space-y-6">
-            {/* Consultation Process Steps */}
+            {/* What You'll Get Section */}
+            <Card className="border-blue-200/80 bg-blue-50/40 shadow-card overflow-hidden">
+              <CardContent className="p-6 space-y-4">
+                <div className="flex items-center gap-2">
+                  <Sparkles className="h-4.5 w-4.5 text-[#0B4982]" />
+                  <h2 className="font-heading font-bold text-base text-slate-900">
+                    What You&apos;ll Get
+                  </h2>
+                </div>
+
+                <div className="space-y-3">
+                  {/* Card 1 */}
+                  <div className="rounded-xl border border-blue-100 bg-white p-3.5 space-y-1 shadow-2xs">
+                    <h3 className="font-heading text-xs font-bold text-slate-900 flex items-center gap-2">
+                      <span className="h-1.5 w-1.5 rounded-full bg-[#6BB640]" />
+                      <span>Understand Learning Needs</span>
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Identify your child&apos;s current strengths and areas that may need more attention.
+                    </p>
+                  </div>
+
+                  {/* Card 2 */}
+                  <div className="rounded-xl border border-blue-100 bg-white p-3.5 space-y-1 shadow-2xs">
+                    <h3 className="font-heading text-xs font-bold text-slate-900 flex items-center gap-2">
+                      <span className="h-1.5 w-1.5 rounded-full bg-[#6BB640]" />
+                      <span>Tutor Guidance</span>
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Get guidance on the type of tutor and learning approach that may suit your child.
+                    </p>
+                  </div>
+
+                  {/* Card 3 */}
+                  <div className="rounded-xl border border-blue-100 bg-white p-3.5 space-y-1 shadow-2xs">
+                    <h3 className="font-heading text-xs font-bold text-slate-900 flex items-center gap-2">
+                      <span className="h-1.5 w-1.5 rounded-full bg-[#6BB640]" />
+                      <span>Personalized Learning Direction</span>
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                      Understand what your child&apos;s 1-on-1 learning journey could look like.
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Assessment Process Steps */}
             <Card className="border-slate-200 bg-white shadow-card">
               <CardContent className="p-6 space-y-4">
                 <h2 className="font-heading font-bold text-base text-slate-900 flex items-center gap-2">
