@@ -1,6 +1,7 @@
 import * as React from "react";
 import type { Metadata } from "next";
 import { Hero } from "@/components/home/Hero";
+import { ParentMessaging } from "@/components/home/ParentMessaging";
 import { PositioningStrip } from "@/components/home/PositioningStrip";
 import { EditorialBrandSection } from "@/components/home/EditorialBrandSection";
 import { SubjectExplorer } from "@/components/home/SubjectExplorer";
@@ -50,7 +51,10 @@ export default function HomePage() {
       {/* 1. Hero Section */}
       <Hero />
 
-      {/* 2. Positioning Strip */}
+      {/* 2. Parent-Focused Messaging Section (Every Student Learns Differently) */}
+      <ParentMessaging />
+
+      {/* 3. Positioning Strip */}
       <PositioningStrip />
 
       {/* Below-the-fold sections with deferred layout computation for sub-second Hero LCP */}
