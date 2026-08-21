@@ -56,7 +56,7 @@ export function Hero() {
                   rel="noopener noreferrer"
                   aria-label="Talk to Us on WhatsApp (+91 9827118949)"
                 >
-                  <WhatsAppIcon className="h-4.5 w-4.5 text-[#25D366] fill-current shrink-0" />
+                  <WhatsAppIcon className="h-5 w-5 text-[#25D366] fill-current shrink-0" />
                   <span>Talk to Us on WhatsApp</span>
                 </a>
               </Button>
