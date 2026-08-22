@@ -26,7 +26,7 @@ export const siteConfig = {
     "TutoLearner connects students with personalized academic guidance, subject-focused tutoring, and learning resources designed around how they learn.",
   url: PRODUCTION_DOMAIN,
   ogImage: `${PRODUCTION_DOMAIN}/images/og-banner.svg`,
-  contactEmail: "enquiry@tutolearner.edu",
+  contactEmail: "tutolearner.edu@gmail.com",
   contactPhone: "+91 9827118949",
   academicHours: "Monday – Saturday: 9:00 AM – 8:00 PM IST",
   locationNote: "Interactive Online Classrooms & Regional Academic Hubs",

@@ -1,4 +1,5 @@
 import * as React from "react";
+import { siteConfig } from "@/data/siteConfig";
 
 interface JsonLdProps {
   data: Record<string, unknown> | Array<Record<string, unknown>>;
@@ -47,8 +48,8 @@ export function generateOrganizationSchema(siteUrl: string) {
     },
     contactPoint: {
       "@type": "ContactPoint",
-      email: "enquiry@tutolearner.edu",
-      telephone: "+91-9827118949",
+      email: siteConfig.contactEmail,
+      telephone: siteConfig.contactPhone,
       contactType: "Admissions & Student Support",
       availableLanguage: ["English", "Hindi"],
     },
