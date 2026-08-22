@@ -1,6 +1,10 @@
 import * as React from "react";
 import type { Metadata } from "next";
-import { methodologyPrinciples, learningProcessSteps } from "@/data/methodology";
+import {
+  methodologyPrinciples,
+  learningProcessSteps,
+  corePhilosophy,
+} from "@/data/methodology";
 import { siteConfig, getCanonicalUrl } from "@/data/siteConfig";
 import { Breadcrumbs } from "@/components/common/Breadcrumbs";
 import { CTASection } from "@/components/common/CTASection";
@@ -86,6 +90,45 @@ export default function MethodologyPage() {
             We replace rote memorization and passive lectures with an active, diagnostic-driven learning cycle tailored to each student&apos;s current proficiency level.
           </p>
         </div>
+
+        {/* Foundational Learning Philosophy: Understand, Adapt, Progress */}
+        <section className="space-y-8">
+          <div className="border-b border-slate-200 pb-4">
+            <span className="text-2xs sm:text-xs font-bold uppercase tracking-wider text-[#0B4982] block mb-1">
+              Learning Philosophy
+            </span>
+            <h2 className="font-heading text-2xl sm:text-3xl font-bold text-slate-900">
+              A More Personal Way to Learn
+            </h2>
+            <p className="text-sm sm:text-base text-slate-600 mt-1">
+              Different students struggle with different concepts, learn at different speeds, and need different kinds of guidance. TutoLearner is built around that idea.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-7">
+            {corePhilosophy.map((item) => (
+              <div
+                key={item.number}
+                className="flex flex-col justify-between rounded-2xl border border-slate-200/90 bg-white p-7 shadow-subtle hover:border-blue-200 hover:shadow-card transition-all duration-200"
+              >
+                <div className="space-y-3">
+                  <span className="font-mono text-sm sm:text-base font-bold text-[#0B4982]">
+                    {item.number}
+                  </span>
+                  <h3 className="font-heading text-xl font-bold text-slate-900 tracking-tight">
+                    {item.title}
+                  </h3>
+                  <p className="text-sm font-semibold text-slate-800 leading-snug">
+                    {item.description}
+                  </p>
+                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
+                    {item.detail}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
 
         {/* 5 Core Principles Grid */}
         <section className="space-y-8">

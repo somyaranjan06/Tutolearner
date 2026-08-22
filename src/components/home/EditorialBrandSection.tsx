@@ -1,30 +1,8 @@
 import * as React from "react";
+import { corePhilosophy } from "@/data/methodology";
 
 export function EditorialBrandSection() {
-  const principles = [
-    {
-      number: "01",
-      title: "Understand",
-      description: "Focus on concepts instead of simply memorizing answers.",
-      detail:
-        "We break down ideas to first principles so students comprehend the underlying logic, ensuring retention that lasts beyond tests.",
-    },
-    {
-      number: "02",
-      title: "Adapt",
-      description: "Adjust explanations and practice around the learner's needs.",
-      detail:
-        "Every learner has unique pacing and cognitive strengths. Instruction flexes with visual models, real-world examples, or structured practice sets.",
-    },
-    {
-      number: "03",
-      title: "Progress",
-      description:
-        "Build understanding through guided practice and continuous improvement.",
-      detail:
-        "Step-by-step problem walkthroughs and continuous feedback transform hesitant attempts into confident, independent problem-solving.",
-    },
-  ];
+  const principles = corePhilosophy;
 
   return (
     <section className="py-20 sm:py-24 lg:py-32 bg-white border-b border-slate-100">

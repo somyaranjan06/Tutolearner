@@ -3,7 +3,6 @@ import type { Metadata } from "next";
 import { Hero } from "@/components/home/Hero";
 import { ParentMessaging } from "@/components/home/ParentMessaging";
 import { PositioningStrip } from "@/components/home/PositioningStrip";
-import { EditorialBrandSection } from "@/components/home/EditorialBrandSection";
 import { SubjectExplorer } from "@/components/home/SubjectExplorer";
 import { TutorsSection } from "@/components/home/TutorsSection";
 import { LearningProcess } from "@/components/home/LearningProcess";
@@ -60,9 +59,6 @@ export default function HomePage() {
 
       {/* Below-the-fold sections with deferred layout computation for sub-second Hero LCP */}
       <div className="content-auto">
-        {/* 3. Editorial Brand Section (Not every student learns the same way) */}
-        <EditorialBrandSection />
-
         {/* 4. Subject Explorer */}
         <SubjectExplorer />
 
