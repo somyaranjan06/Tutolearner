@@ -76,6 +76,7 @@ export const subjects: Subject[] = [
     slug: "science",
     tagline: "Empirical Inquiry across Physics, Chemistry & Biology",
     description: "Building an empirical, inquiry-driven understanding of physical laws, chemical reactions, and biological life processes through concept visualization, diagrams, and scientific modeling.",
+    metaDescription: "1-on-1 Science tutoring focused on concepts, curiosity, and understanding.",
     tutor: ["Somya Ranjan Naik", "Shreya Tiwari"],
     tutorSlugs: ["somya-ranjan-naik", "shreya-tiwari"],
     icon: "Atom",
