@@ -54,7 +54,7 @@ export const faqs: FAQItem[] = [
     id: "how-to-book-assessment",
     question: "How can I book a complimentary assessment?",
     answer:
-      "Click “Book Free Demo Class” on the website and submit the enquiry form with your child's details. Our team will review the information and contact you regarding the next step.",
+      "Click “Book a Free Demo Class” on the website and submit the enquiry form with your child's details. Our team will review the information and contact you regarding the next step.",
     category: "Booking",
   },
   {

@@ -274,7 +274,7 @@ export default function MethodologyPage() {
         <CTASection
           title="Experience our structured teaching method"
           subtitle="Submit an enquiry to schedule an introductory diagnostic baseline session with our lead faculty."
-          primaryBtnText="Book Free Demo Class"
+          primaryBtnText="Book a Free Demo Class"
           primaryBtnHref="/contact"
         />
       </div>

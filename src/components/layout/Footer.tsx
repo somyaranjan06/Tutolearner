@@ -143,7 +143,7 @@ export function Footer() {
                 href="/contact"
                 className="inline-flex items-center gap-1.5 text-xs font-bold text-[#7ECB51] hover:text-white transition-colors"
               >
-                <span>Book Free Demo Class</span>
+                <span>Book a Free Demo Class</span>
                 <ArrowUpRight className="h-3.5 w-3.5" />
               </Link>
             </div>

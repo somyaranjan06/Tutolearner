@@ -17,7 +17,7 @@ interface CTASectionProps {
 export function CTASection({
   title = "Ready to make learning clearer and more rewarding?",
   subtitle = "Connect with Somya Ranjan Naik, Shiwangi, or Shreya Tiwari for a diagnostic baseline review and a personalized study roadmap.",
-  primaryBtnText = "Book Free Demo Class",
+  primaryBtnText = "Book a Free Demo Class",
   primaryBtnHref = "/contact",
   secondaryBtnText = "Meet the Teaching Team",
   secondaryBtnHref = "/tutors",

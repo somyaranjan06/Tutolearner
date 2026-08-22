@@ -39,7 +39,7 @@ export function Hero() {
                 className="bg-[#0B4982] hover:bg-[#083A68] text-white font-semibold shadow-subtle gap-2 text-sm sm:text-base py-3.5 px-7 rounded-xl transition-all duration-200"
               >
                 <Link href="/contact">
-                  <span>Book Free Demo Class</span>
+                  <span>Book a Free Demo Class</span>
                   <ArrowRight className="h-4 w-4" />
                 </Link>
               </Button>

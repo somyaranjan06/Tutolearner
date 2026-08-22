@@ -20,14 +20,14 @@ export function FinalCTA() {
             </span>
 
             <h2 className="font-heading text-3.5xl sm:text-4.5xl md:text-5xl font-extrabold tracking-tight text-white leading-tight">
-              Book Free Demo Class
+              Book a Free Demo Class
             </h2>
 
             <p className="text-base sm:text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-normal">
               Experience personalized 1-on-1 learning.
             </p>
 
-            {/* Dual CTAs: Book Free Demo Class & Talk to Us on WhatsApp */}
+            {/* Dual CTAs: Book a Free Demo Class & Talk to Us on WhatsApp */}
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3.5 pt-4">
               <Button
                 asChild
@@ -35,7 +35,7 @@ export function FinalCTA() {
                 className="bg-[#0B4982] hover:bg-[#083A68] text-white font-semibold shadow-md gap-2 py-3.5 px-8 justify-center text-sm sm:text-base rounded-xl"
               >
                 <Link href="/contact">
-                  <span>Book Free Demo Class</span>
+                  <span>Book a Free Demo Class</span>
                   <ArrowRight className="h-4 w-4" />
                 </Link>
               </Button>

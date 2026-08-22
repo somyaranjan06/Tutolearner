@@ -75,7 +75,7 @@ export default function FAQPage() {
         <CTASection
           title="Have a specific question not covered here?"
           subtitle="Submit a direct consultation enquiry to speak with our academic coordinator."
-          primaryBtnText="Book Free Demo Class"
+          primaryBtnText="Book a Free Demo Class"
           primaryBtnHref="/contact"
         />
       </div>

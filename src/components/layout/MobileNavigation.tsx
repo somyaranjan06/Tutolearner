@@ -7,7 +7,8 @@ import { usePathname } from "next/navigation";
 import { navItems } from "@/data/navigation";
 import { Button } from "@/components/ui/button";
 import { X, ArrowRight, Mail, Clock } from "lucide-react";
-import { siteConfig } from "@/data/siteConfig";
+import { siteConfig, socialLinks } from "@/data/siteConfig";
+import { WhatsAppIcon } from "@/components/common/SocialIcons";
 import { cn } from "@/lib/utils";
 
 interface MobileNavigationProps {
@@ -115,12 +116,29 @@ export function MobileNavigation({ isOpen, onClose }: MobileNavigationProps) {
           <Button
             asChild
             size="lg"
-            className="w-full justify-center bg-[#0B4982] hover:bg-[#083A68] text-white font-semibold shadow-card gap-2 rounded-xl"
+            className="w-full justify-center bg-[#0B4982] hover:bg-[#083A68] text-white font-semibold shadow-card gap-2 rounded-xl h-11 text-sm"
           >
             <Link href="/contact" onClick={onClose}>
-              <span>Book Free Demo Class</span>
+              <span>Book a Free Demo Class</span>
               <ArrowRight className="h-4 w-4" />
             </Link>
+          </Button>
+
+          <Button
+            asChild
+            variant="outline"
+            size="lg"
+            className="w-full justify-center border-slate-200 hover:bg-emerald-50 text-slate-800 hover:text-[#075E54] font-semibold gap-2 rounded-xl h-11 text-sm bg-white"
+          >
+            <a
+              href={socialLinks.whatsapp}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={onClose}
+            >
+              <WhatsAppIcon className="h-4 w-4 text-[#25D366] fill-current shrink-0" />
+              <span>Talk to Us on WhatsApp</span>
+            </a>
           </Button>
 
           <div className="pt-2 text-2xs text-slate-600 space-y-1">

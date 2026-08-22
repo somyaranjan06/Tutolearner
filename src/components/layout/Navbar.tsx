@@ -93,23 +93,25 @@ export function Navbar() {
             })}
           </nav>
 
-          {/* Primary CTA & Mobile Toggle */}
-          <div className="flex items-center gap-3">
+          {/* Desktop Primary CTA */}
+          <div className="hidden lg:flex items-center">
             <Button
               asChild
-              className="bg-[#0B4982] hover:bg-[#083A68] active:bg-[#06294a] text-white text-xs sm:text-sm font-semibold h-10 px-5 sm:px-6 rounded-xl shadow-subtle transition-all duration-200"
+              className="bg-[#0B4982] hover:bg-[#083A68] active:bg-[#06294a] text-white text-sm font-semibold h-10 px-5 xl:px-6 rounded-xl shadow-subtle transition-all duration-200"
             >
               <Link href="/contact" className="gap-2">
-                <span>Book Free Demo Class</span>
+                <span>Book a Free Demo Class</span>
                 <ArrowRight className="h-3.5 w-3.5" />
               </Link>
             </Button>
+          </div>
 
-            {/* Mobile Menu Toggle */}
+          {/* Mobile Menu Toggle */}
+          <div className="flex lg:hidden items-center">
             <button
               type="button"
               onClick={() => setMobileMenuOpen(true)}
-              className="inline-flex lg:hidden items-center justify-center p-2.5 rounded-xl text-slate-700 hover:text-[#0B4982] hover:bg-slate-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0B4982] border border-slate-200 transition-colors"
+              className="inline-flex items-center justify-center p-2.5 rounded-xl text-slate-700 hover:text-[#0B4982] hover:bg-slate-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0B4982] border border-slate-200 transition-colors"
               aria-expanded={mobileMenuOpen}
               aria-label="Open Navigation Menu"
             >
