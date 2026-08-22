@@ -100,7 +100,7 @@ export function Navbar() {
               className="bg-[#0B4982] hover:bg-[#083A68] active:bg-[#06294a] text-white text-xs sm:text-sm font-semibold h-10 px-5 sm:px-6 rounded-xl shadow-subtle transition-all duration-200"
             >
               <Link href="/contact" className="gap-2">
-                <span>Start Learning</span>
+                <span>Book Free Demo Class</span>
                 <ArrowRight className="h-3.5 w-3.5" />
               </Link>
             </Button>

@@ -67,7 +67,7 @@ export default function SubjectsPage() {
         <CTASection
           title="Looking for multi-subject guidance?"
           subtitle="You can select multiple subjects on our enquiry form to combine Mathematics, Science, Social Science, or English."
-          primaryBtnText="Submit Multi-Subject Request"
+          primaryBtnText="Book Free Demo Class"
           primaryBtnHref="/contact"
         />
       </div>

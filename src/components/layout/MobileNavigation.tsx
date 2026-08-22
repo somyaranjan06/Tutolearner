@@ -118,7 +118,7 @@ export function MobileNavigation({ isOpen, onClose }: MobileNavigationProps) {
             className="w-full justify-center bg-[#0B4982] hover:bg-[#083A68] text-white font-semibold shadow-card gap-2 rounded-xl"
           >
             <Link href="/contact" onClick={onClose}>
-              <span>Start Learning</span>
+              <span>Book Free Demo Class</span>
               <ArrowRight className="h-4 w-4" />
             </Link>
           </Button>

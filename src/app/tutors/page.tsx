@@ -79,7 +79,7 @@ export default function TutorsPage() {
         <CTASection
           title="Interested in working with a specific tutor?"
           subtitle="Submit an enquiry specifying your grade level and preferred tutor to schedule an initial diagnostic session."
-          primaryBtnText="Submit Faculty Enquiry"
+          primaryBtnText="Book Free Demo Class"
           primaryBtnHref="/contact"
         />
       </div>
