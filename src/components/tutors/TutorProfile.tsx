@@ -60,15 +60,28 @@ export function TutorProfile({ tutor }: TutorProfileProps) {
                 Teaching Approach &amp; Pedagogy
               </h2>
             </div>
-            <p className="text-sm sm:text-base text-slate-700 leading-relaxed font-normal">
-              {tutor.teachingStyle}
-            </p>
 
-            <div className="pt-2">
-              <p className="text-2xs font-bold uppercase tracking-wider text-slate-600 mb-3">
-                Core Pedagogical Focus Areas
-              </p>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            {tutor.pedagogyPoints && tutor.pedagogyPoints.length > 0 ? (
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 pt-1">
+                {tutor.pedagogyPoints.map((point, idx) => (
+                  <div
+                    key={idx}
+                    className="flex flex-col justify-start rounded-xl border border-slate-200 bg-white p-4 shadow-subtle space-y-1.5"
+                  >
+                    <div className="flex items-center gap-2">
+                      <CheckCircle2 className="h-4 w-4 text-[#579631] shrink-0" />
+                      <h3 className="font-heading font-bold text-sm text-slate-900">
+                        {point.title}
+                      </h3>
+                    </div>
+                    <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal pl-6">
+                      {point.description}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            ) : (
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
                 {tutor.methodologyFocus.map((focus, idx) => (
                   <div
                     key={idx}
@@ -79,7 +92,7 @@ export function TutorProfile({ tutor }: TutorProfileProps) {
                   </div>
                 ))}
               </div>
-            </div>
+            )}
           </section>
 
           {/* 7. Subjects / Classes Taught & Syllabus Breakdown */}
@@ -117,12 +130,12 @@ export function TutorProfile({ tutor }: TutorProfileProps) {
             </div>
           </section>
 
-          {/* 8. What Students Can Expect */}
+          {/* 8. What Your Child Can Expect */}
           <section className="space-y-4">
             <div className="flex items-center gap-2 text-slate-900">
               <ListChecks className="h-5 w-5 text-[#0B4982]" />
               <h2 className="font-heading text-xl sm:text-2xl font-bold tracking-tight">
-                What Students Can Expect in Sessions
+                What Your Child Can Expect
               </h2>
             </div>
 

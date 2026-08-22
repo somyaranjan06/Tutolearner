@@ -9,11 +9,30 @@ export const tutors: Tutor[] = [
     availableSubjects: ["Mathematics", "Science (Physics, Chemistry & Biology)"],
     featured: true,
     image: "/images/tutors/Somya.jpeg",
-    shortBio: "Specialized educator directing core instruction across analytical Mathematics and empirical Science disciplines. Dedicated to building foundational clarity, numerical accuracy, and systematic problem-solving frameworks.",
+    positioningSentence: "Helping students master Mathematics and Science through foundational clarity and guided problem-solving.",
+    shortBio: "Somya helps students understand Mathematics and Science through intuitive explanations, step-by-step problem solving and guided practice. His approach focuses on building strong conceptual foundations, eliminating calculation hesitation and helping students master topics from first principles rather than memorizing formulas.",
     teachingStyle: "First-principles concept breakdown, step-by-step mathematical reasoning, diagnostic error taxonomy, and structured practice sets. Avoids formula cramming by demonstrating why mathematical and scientific relationships hold true.",
     cardDescription: "Concept-focused learning with clear, step-by-step guidance.",
     bestFor: "Concept clarity & problem-solving",
     bestSuitedFor: "Students who need stronger conceptual understanding, step-by-step explanations and guided problem-solving.",
+    pedagogyPoints: [
+      {
+        title: "First Principles",
+        description: "Build understanding before memorizing formulas."
+      },
+      {
+        title: "Step-by-Step Solving",
+        description: "Break complex problems into clear, manageable steps."
+      },
+      {
+        title: "Guided Practice",
+        description: "Build numerical accuracy and confidence through active practice."
+      },
+      {
+        title: "Concept & Exam Mastery",
+        description: "Strengthen fundamentals for both school exams and long-term retention."
+      }
+    ],
     curriculumLevels: [
       "Middle School Foundation (Classes 6–8)",
       "Secondary School Board Preparation (Classes 9–10)",
@@ -72,11 +91,30 @@ export const tutors: Tutor[] = [
     availableSubjects: ["Social Science (History, Geography, Political Science, Economics)"],
     featured: true,
     image: "/images/tutors/Shiwangi.png",
-    shortBio: "Dedicated educator specializing in comprehensive Social Science pedagogy. Guides students to develop historical perspective, geographical understanding, socio-political awareness, and structured essay writing.",
+    positioningSentence: "Helping students build strong Social Science understanding through structured, contextual learning.",
+    shortBio: "Shiwangi helps students understand Social Science through clear explanations, real-world context and structured practice. Her approach focuses on building conceptual clarity, improving answer writing and helping students connect topics rather than memorizing isolated facts.",
     teachingStyle: "Contextual narrative structuring, thematic mapping, comparative socio-economic analysis, and structured analytical answer formulation. Focuses on transforming dense factual content into interconnected, memorable conceptual themes.",
     cardDescription: "Structured learning with strong conceptual and contextual understanding.",
     bestFor: "History, geography & social science",
     bestSuitedFor: "Students who benefit from structured explanations, contextual learning and stronger understanding of Social Science concepts.",
+    pedagogyPoints: [
+      {
+        title: "Concept First",
+        description: "Build understanding before memorization."
+      },
+      {
+        title: "Contextual Learning",
+        description: "Connect topics with real-world events and examples."
+      },
+      {
+        title: "Structured Practice",
+        description: "Develop stronger answers through guided practice."
+      },
+      {
+        title: "Exam-Focused Support",
+        description: "Build confidence through structured revision and practice."
+      }
+    ],
     curriculumLevels: [
       "Middle School Social Studies (Classes 6–8)",
       "Secondary School Social Science (Classes 9–10 Board Prep)",
@@ -125,11 +163,30 @@ export const tutors: Tutor[] = [
     availableSubjects: ["Science", "English (Language Mechanics, Literature & Composition)"],
     featured: true,
     image: "/images/tutors/Shreya.png",
-    shortBio: "Versatile educator bridging empirical scientific reasoning with nuanced English language and literature mastery. Emphasizes clear expressive communication, scientific observation, and analytical writing.",
+    positioningSentence: "Helping students excel in Science and English through empirical reasoning and expressive communication.",
+    shortBio: "Shreya helps students master Science and English through clear conceptual breakdowns, interactive inquiry and structured writing practice. Her approach bridges empirical scientific understanding with nuanced communication skills, helping students express their ideas with confidence and precision.",
     teachingStyle: "Interdisciplinary contextualization, active inquiry in Science, rigorous textual analysis, grammar mechanics, and expressive writing workshops. Balances analytical deconstruction with expressive fluency.",
     cardDescription: "Clear explanations with a focus on scientific thinking and communication.",
     bestFor: "Science & expressive communication",
     bestSuitedFor: "Students who want to strengthen scientific understanding, vocabulary, communication and expressive writing.",
+    pedagogyPoints: [
+      {
+        title: "Empirical Clarity",
+        description: "Connect scientific concepts with everyday observation."
+      },
+      {
+        title: "Expressive Communication",
+        description: "Develop precise vocabulary and structured English writing."
+      },
+      {
+        title: "Guided Problem Solving",
+        description: "Walk through questions step-by-step to build analytical thinking."
+      },
+      {
+        title: "Targeted Revision",
+        description: "Reinforce key concepts through regular practice and constructive feedback."
+      }
+    ],
     curriculumLevels: [
       "Middle School Foundation (Classes 6–8 Science & English)",
       "Secondary School (Classes 9–10 Science & English Board Prep)",

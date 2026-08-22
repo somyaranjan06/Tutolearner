@@ -3,6 +3,11 @@ export interface SyllabusTopicGroup {
   topics: string[];
 }
 
+export interface PedagogyPoint {
+  title: string;
+  description: string;
+}
+
 export interface Tutor {
   name: string;
   slug: string;
@@ -11,6 +16,8 @@ export interface Tutor {
   availableSubjects: string[];
   shortBio: string;
   teachingStyle: string;
+  positioningSentence?: string;
+  pedagogyPoints?: PedagogyPoint[];
   bestSuitedFor?: string;
   cardDescription?: string;
   bestFor?: string;

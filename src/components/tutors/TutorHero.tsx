@@ -67,6 +67,13 @@ export function TutorHero({ tutor }: TutorHeroProps) {
                 </span>
               ))}
             </div>
+
+            {/* Positioning Sentence */}
+            {tutor.positioningSentence && (
+              <p className="text-xs sm:text-sm text-slate-300 font-normal leading-relaxed pt-1 max-w-2xl">
+                {tutor.positioningSentence}
+              </p>
+            )}
           </div>
 
           {/* Direct CTA Action */}
