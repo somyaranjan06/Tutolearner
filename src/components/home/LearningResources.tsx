@@ -1,10 +1,7 @@
 import * as React from "react";
 import {
   FileText,
-  Eye,
-  HelpCircle,
   Layers,
-  BookOpen,
   Newspaper,
   Clock,
 } from "lucide-react";
@@ -12,44 +9,23 @@ import {
 export function LearningResources() {
   const resources = [
     {
-      title: "Concept Notes",
+      title: "Concept & Study Notes",
       description:
-        "Structured, concise chapter summaries and formula cheat-sheets.",
+        "Clear, structured explanations to help students understand and revise important concepts.",
       icon: FileText,
       status: "Coming Soon",
     },
     {
-      title: "Visual Learning",
+      title: "Practice & Worksheets",
       description:
-        "Diagrammatic deconstructions and animated scientific/mathematical models.",
-      icon: Eye,
-      status: "Coming Soon",
-    },
-    {
-      title: "Practice Questions",
-      description:
-        "Curated problem sets categorized by difficulty and question type.",
-      icon: HelpCircle,
-      status: "Coming Soon",
-    },
-    {
-      title: "Worksheets",
-      description:
-        "Printable homework sheets with graded scaffolding for self-study.",
+        "Practice questions and worksheets designed to reinforce understanding and build confidence.",
       icon: Layers,
       status: "Coming Soon",
     },
     {
-      title: "Study Guides",
+      title: "Study Guides & Articles",
       description:
-        "Comprehensive board-exam preparation and revision roadmaps.",
-      icon: BookOpen,
-      status: "Coming Soon",
-    },
-    {
-      title: "Educational Articles",
-      description:
-        "Pedagogical insights and study strategies written by our tutors.",
+        "Practical study guides and educational articles to help students learn more effectively.",
       icon: Newspaper,
       status: "Coming Soon",
     },
@@ -64,15 +40,15 @@ export function LearningResources() {
             Academic Resources
           </span>
           <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900 leading-[1.12]">
-            Learning Beyond the Classroom
+            Learning Resources
           </h2>
           <p className="text-base sm:text-lg text-slate-600 leading-relaxed font-normal">
-            Explore learning resources designed to make difficult concepts easier to understand.
+            We&apos;re building a growing library of concept notes, practice materials, study guides and educational resources to support students beyond their live tuition sessions.
           </p>
         </div>
 
-        {/* 6 Resources Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        {/* 3 Resources Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
           {resources.map((item) => {
             const Icon = item.icon;
 
