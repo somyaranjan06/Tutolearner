@@ -4,7 +4,7 @@ import Link from "next/link";
 import { Tutor } from "@/types";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
-import { ArrowRight, Sparkles, CheckCircle2, ShieldCheck } from "lucide-react";
+import { ArrowRight, Sparkles, CheckCircle2, ShieldCheck, UserCheck } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 interface TutorCardProps {
@@ -68,7 +68,7 @@ export function TutorCard({ tutor, className, isCompact = false }: TutorCardProp
         </div>
 
         {/* Card Body */}
-        <CardContent className="p-6 sm:p-7 space-y-5">
+        <CardContent className="p-6 sm:p-7 space-y-4">
           <div>
             <p className="text-2xs font-bold uppercase tracking-wider text-slate-600 mb-1.5">
               Faculty Profile
@@ -90,11 +90,24 @@ export function TutorCard({ tutor, className, isCompact = false }: TutorCardProp
             </div>
           )}
 
+          {/* Best Suited For Section */}
+          {tutor.bestSuitedFor && (
+            <div className="rounded-xl bg-blue-50/70 p-3.5 border border-blue-200/80 space-y-1">
+              <div className="flex items-center gap-1.5 text-2xs font-bold uppercase tracking-wider text-[#0B4982]">
+                <UserCheck className="h-3.5 w-3.5 text-[#0B4982]" />
+                <span>Best Suited For</span>
+              </div>
+              <p className="text-xs sm:text-sm text-slate-700 leading-relaxed font-medium">
+                {tutor.bestSuitedFor}
+              </p>
+            </div>
+          )}
+
           <div>
-            <p className="text-2xs font-bold uppercase tracking-wider text-slate-600 mb-2.5">
+            <p className="text-2xs font-bold uppercase tracking-wider text-slate-600 mb-2">
               Core Instructional Focus
             </p>
-            <ul className="space-y-2">
+            <ul className="space-y-1.5">
               {tutor.methodologyFocus.slice(0, 3).map((focus, index) => (
                 <li key={index} className="flex items-start gap-2 text-xs sm:text-sm text-slate-700">
                   <CheckCircle2 className="h-4 w-4 text-[#579631] shrink-0 mt-0.5" />

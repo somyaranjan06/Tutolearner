@@ -11,6 +11,7 @@ export interface Tutor {
   availableSubjects: string[];
   shortBio: string;
   teachingStyle: string;
+  bestSuitedFor?: string;
   image: string;
   featured: boolean;
   curriculumLevels: string[];

@@ -11,6 +11,7 @@ export const tutors: Tutor[] = [
     image: "/images/tutors/Somya.jpeg",
     shortBio: "Specialized educator directing core instruction across analytical Mathematics and empirical Science disciplines. Dedicated to building foundational clarity, numerical accuracy, and systematic problem-solving frameworks.",
     teachingStyle: "First-principles concept breakdown, step-by-step mathematical reasoning, diagnostic error taxonomy, and structured practice sets. Avoids formula cramming by demonstrating why mathematical and scientific relationships hold true.",
+    bestSuitedFor: "Students who need stronger conceptual understanding, step-by-step explanations and guided problem-solving.",
     curriculumLevels: [
       "Middle School Foundation (Classes 6–8)",
       "Secondary School Board Preparation (Classes 9–10)",
@@ -71,6 +72,7 @@ export const tutors: Tutor[] = [
     image: "/images/tutors/Shiwangi.png",
     shortBio: "Dedicated educator specializing in comprehensive Social Science pedagogy. Guides students to develop historical perspective, geographical understanding, socio-political awareness, and structured essay writing.",
     teachingStyle: "Contextual narrative structuring, thematic mapping, comparative socio-economic analysis, and structured analytical answer formulation. Focuses on transforming dense factual content into interconnected, memorable conceptual themes.",
+    bestSuitedFor: "Students who benefit from structured explanations, contextual learning and stronger understanding of Social Science concepts.",
     curriculumLevels: [
       "Middle School Social Studies (Classes 6–8)",
       "Secondary School Social Science (Classes 9–10 Board Prep)",
@@ -121,6 +123,7 @@ export const tutors: Tutor[] = [
     image: "/images/tutors/Shreya.png",
     shortBio: "Versatile educator bridging empirical scientific reasoning with nuanced English language and literature mastery. Emphasizes clear expressive communication, scientific observation, and analytical writing.",
     teachingStyle: "Interdisciplinary contextualization, active inquiry in Science, rigorous textual analysis, grammar mechanics, and expressive writing workshops. Balances analytical deconstruction with expressive fluency.",
+    bestSuitedFor: "Students who want to strengthen scientific understanding, vocabulary, communication and expressive writing.",
     curriculumLevels: [
       "Middle School Foundation (Classes 6–8 Science & English)",
       "Secondary School (Classes 9–10 Science & English Board Prep)",
