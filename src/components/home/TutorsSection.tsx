@@ -15,7 +15,7 @@ export function TutorsSection() {
             Academic Faculty
           </span>
           <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900 leading-[1.12]">
-            Meet the people behind the learning.
+            Our Dedicated Educators
           </h2>
           <p className="text-base sm:text-lg text-slate-600 leading-relaxed font-normal">
             Different perspectives. Different strengths. One goal — helping students learn with clarity.

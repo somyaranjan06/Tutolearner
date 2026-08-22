@@ -85,25 +85,7 @@ export function AboutFounder() {
             {/* Story Text */}
             <div className="space-y-4 text-sm sm:text-base text-slate-600 leading-relaxed font-normal">
               <p>
-                Learning becomes more meaningful when students are given the right guidance, resources, and space to understand concepts in their own way.
-              </p>
-              <p>
-                TutoLearner began with a simple idea — learning should not be limited to one teaching style, one pace, or one way of understanding a concept.
-              </p>
-              <p>
-                As a tutor, Somya Ranjan Naik recognized that students approach the same subject differently. Some need concepts explained visually, some learn through examples and practice, while others need the right guidance and confidence to ask questions.
-              </p>
-              <p>
-                That belief became the foundation of TutoLearner.
-              </p>
-              <p>
-                The vision is to bring together capable tutors, useful learning resources, and personalized academic guidance so that students can find an approach that works for them.
-              </p>
-              <p>
-                Rather than focusing only on completing a syllabus, TutoLearner aims to make learning more understandable, practical, and engaging — helping students move from simply remembering information to actually understanding it.
-              </p>
-              <p>
-                That belief is at the heart of TutoLearner.
+                TutoLearner began with a simple idea — every learner deserves to be understood, not just taught. Somya Ranjan Naik founded TutoLearner to create a more personal approach to education, where dedicated educators work closely with students to build understanding, confidence, and lasting learning habits.
               </p>
             </div>
 

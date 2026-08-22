@@ -43,7 +43,7 @@ export function LearningProcess() {
             How It Works
           </span>
           <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900 leading-[1.12]">
-            Learning, without the one-size-fits-all approach.
+            A Learning Experience Built Around You
           </h2>
           <p className="text-base sm:text-lg text-slate-600 leading-relaxed font-normal">
             A structured, intentional learning journey built around how students actually understand concepts.

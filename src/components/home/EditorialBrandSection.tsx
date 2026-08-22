@@ -35,7 +35,7 @@ export function EditorialBrandSection() {
             The Philosophy
           </span>
           <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900 leading-[1.12]">
-            Not every student learns the same way.
+            A More Personal Way to Learn
           </h2>
           <p className="text-base sm:text-lg md:text-xl text-slate-600 leading-relaxed font-normal pt-2">
             Different students struggle with different concepts, learn at different speeds, and need different kinds of guidance. TutoLearner is built around that idea.

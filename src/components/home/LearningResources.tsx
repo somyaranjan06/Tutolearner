@@ -64,7 +64,7 @@ export function LearningResources() {
             Academic Resources
           </span>
           <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900 leading-[1.12]">
-            Learning doesn&apos;t stop when the class ends.
+            Learning Beyond the Classroom
           </h2>
           <p className="text-base sm:text-lg text-slate-600 leading-relaxed font-normal">
             Explore learning resources designed to make difficult concepts easier to understand.

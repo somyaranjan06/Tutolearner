@@ -24,10 +24,10 @@ export function Hero() {
             {/* Main Headline */}
             <div className="space-y-4">
               <h1 className="font-heading text-4xl sm:text-5xl md:text-5.5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 leading-[1.08]">
-                Personalized 1-on-1 Tuition for Every Learner
+                Personalized 1-on-1 Online Tutoring
               </h1>
               <p className="mx-auto lg:mx-0 max-w-2xl text-base sm:text-lg md:text-xl text-slate-600 leading-relaxed font-normal">
-                Start with a complimentary student assessment to understand your child’s learning needs and find the right approach for them.
+                Individual attention. Quality learning. Dedicated educators. Learning designed around you.
               </p>
             </div>
 

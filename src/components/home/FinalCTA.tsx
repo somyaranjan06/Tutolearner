@@ -18,11 +18,11 @@ export function FinalCTA() {
             </span>
 
             <h2 className="font-heading text-3.5xl sm:text-4.5xl md:text-5xl font-extrabold tracking-tight text-white leading-tight">
-              Ready to find your way of learning?
+              Book a Demo Class
             </h2>
 
             <p className="text-base sm:text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-normal">
-              Tell us what you&apos;re looking for, and we&apos;ll help you find the right starting point.
+              Experience personalized 1-on-1 learning.
             </p>
 
             {/* Dual CTAs: Start Learning & Talk to Us */}

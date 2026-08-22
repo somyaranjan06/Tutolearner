@@ -13,7 +13,7 @@ export function SubjectExplorer() {
             Curriculum Areas
           </span>
           <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900 leading-[1.12]">
-            Find the right subject. Find the right guidance.
+            Explore Our Subjects
           </h2>
           <p className="text-base sm:text-lg text-slate-600 leading-relaxed font-normal">
             Specialized instruction across four core disciplines, delivered by subject-dedicated educators focused on concept clarity.
