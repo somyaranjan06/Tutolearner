@@ -16,18 +16,13 @@ export const navItems: NavItem[] = [
     description: "Mathematics, Science, Social Science & English",
   },
   {
-    label: "Learning Resources",
-    href: "/#resources",
-    description: "Concept notes, visual breakdowns & practice sheets",
-  },
-  {
-    label: "How It Works",
-    href: "/#how-it-works",
-    description: "Our 4-step personalized learning pathway",
+    label: "Methodology",
+    href: "/methodology",
+    description: "Our structured teaching approach & learning roadmap",
   },
   {
     label: "FAQ",
-    href: "/#faq",
+    href: "/faq",
     description: "Frequently asked questions about classes and tutors",
   },
 ];
@@ -38,13 +33,11 @@ export const footerLinks = {
   explore: [
     { label: "Tutors", href: "/tutors" },
     { label: "Subjects", href: "/subjects" },
-    { label: "Learning Resources", href: "/#resources" },
-    { label: "How It Works", href: "/#how-it-works" },
+    { label: "Methodology", href: "/methodology" },
   ],
   support: [
-    { label: "FAQ", href: "/#faq" },
+    { label: "FAQ", href: "/faq" },
     { label: "Contact", href: "/contact" },
-    { label: "Enquire", href: "/contact" },
   ],
   subjects: [
     { label: "Mathematics", href: "/subjects/mathematics" },

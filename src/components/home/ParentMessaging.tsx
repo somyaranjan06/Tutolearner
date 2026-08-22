@@ -88,7 +88,7 @@ export function ParentMessaging() {
           </p>
           <div>
             <Link
-              href="/#how-it-works"
+              href="/methodology"
               className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold text-[#0B4982] hover:text-[#083A68] underline-offset-4 hover:underline transition-colors py-1"
             >
               <span>How TutoLearner Helps</span>
