@@ -41,7 +41,7 @@ export function TutorGrid({ tutors, className, showSubjectFilter = false }: Tuto
                 : "bg-slate-100 text-slate-700 hover:bg-blue-50 hover:text-[#0B4982]"
             )}
           >
-            All Tutors ({tutors.length})
+            All Tutors
           </button>
           {allSubjects.map((subject) => (
             <button

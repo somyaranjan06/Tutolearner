@@ -52,15 +52,25 @@ export function ContactForm() {
 
   // Derive initial values from URL search params
   const initialSubject = React.useMemo(() => {
-    if (!subjectParam) return "Mathematics";
-    const mapping: Record<string, EnquiryFormData["subject"]> = {
-      mathematics: "Mathematics",
-      science: "Science",
-      "social-science": "Social Science",
-      english: "English",
-    };
-    return mapping[subjectParam.toLowerCase()] || "Mathematics";
-  }, [subjectParam]);
+    if (subjectParam) {
+      const mapping: Record<string, EnquiryFormData["subject"]> = {
+        mathematics: "Mathematics",
+        science: "Science",
+        "social-science": "Social Science",
+        english: "English",
+      };
+      if (mapping[subjectParam.toLowerCase()]) {
+        return mapping[subjectParam.toLowerCase()];
+      }
+    }
+    if (tutorParam) {
+      const found = tutors.find((t) => t.slug === tutorParam);
+      if (found && found.subjects.length > 0) {
+        return found.subjects[0] as EnquiryFormData["subject"];
+      }
+    }
+    return "Mathematics";
+  }, [subjectParam, tutorParam]);
 
   const initialTutor = React.useMemo(() => {
     if (!tutorParam) return "Somya Ranjan Naik";
@@ -93,6 +103,14 @@ export function ContactForm() {
       hp_website: "",
     },
   });
+
+  // Synchronize when query parameters change
+  React.useEffect(() => {
+    if (tutorParam || subjectParam) {
+      setValue("subject", initialSubject);
+      setValue("preferredTutor", initialTutor);
+    }
+  }, [tutorParam, subjectParam, initialSubject, initialTutor, setValue]);
 
   const selectedSubject = useWatch({ control, name: "subject" }) || initialSubject;
   const userRole = useWatch({ control, name: "userRole" }) || "parent";
