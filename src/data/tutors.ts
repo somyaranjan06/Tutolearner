@@ -10,6 +10,7 @@ export const tutors: Tutor[] = [
     featured: true,
     image: "/images/tutors/Somya.jpeg",
     positioningSentence: "Helping students master Mathematics and Science through foundational clarity and guided problem-solving.",
+    metaDescription: "Somya Ranjan Naik, Founder & 1-on-1 Mathematics and Science Tutor, focused on clear concepts, problem-solving, and strong foundations.",
     shortBio: "Somya helps students understand Mathematics and Science through intuitive explanations, step-by-step problem solving and guided practice. His approach focuses on building strong conceptual foundations, eliminating calculation hesitation and helping students master topics from first principles rather than memorizing formulas.",
     teachingStyle: "First-principles concept breakdown, step-by-step mathematical reasoning, diagnostic error taxonomy, and structured practice sets. Avoids formula cramming by demonstrating why mathematical and scientific relationships hold true.",
     cardDescription: "Concept-focused learning with clear, step-by-step guidance.",

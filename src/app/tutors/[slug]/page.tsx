@@ -44,7 +44,9 @@ export async function generateMetadata({
     title: {
       absolute: `${tutor.name} | ${tutor.roleTitle} – TutoLearner`,
     },
-    description: `${tutor.name} provides personalized academic tutoring in ${subjectsList}. ${tutor.shortBio}`,
+    description:
+      tutor.metaDescription ||
+      `${tutor.name} provides personalized academic tutoring in ${subjectsList}. ${tutor.shortBio}`,
     alternates: {
       canonical: canonicalUrl,
     },

@@ -17,6 +17,7 @@ export interface Tutor {
   shortBio: string;
   teachingStyle: string;
   positioningSentence?: string;
+  metaDescription?: string;
   pedagogyPoints?: PedagogyPoint[];
   bestSuitedFor?: string;
   cardDescription?: string;
