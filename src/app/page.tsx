@@ -2,6 +2,7 @@ import * as React from "react";
 import type { Metadata } from "next";
 import { Hero } from "@/components/home/Hero";
 import { ParentMessaging } from "@/components/home/ParentMessaging";
+import { TutorsSection } from "@/components/home/TutorsSection";
 import { AboutFounder } from "@/components/home/AboutFounder";
 import { FinalCTA } from "@/components/home/FinalCTA";
 import { siteConfig, getCanonicalUrl } from "@/data/siteConfig";
@@ -40,10 +41,13 @@ export default function HomePage() {
       {/* 2. Parent-Focused Messaging Section (Every Student Learns Differently) */}
       <ParentMessaging />
 
-      {/* 3. Founder / Trust Section (Somya Ranjan Naik) */}
+      {/* 3. Meet Our Tutors */}
+      <TutorsSection />
+
+      {/* 4. Founder / Trust Section (Somya Ranjan Naik) */}
       <AboutFounder />
 
-      {/* 4. Final CTA */}
+      {/* 5. Final CTA */}
       <FinalCTA />
     </div>
   );
