@@ -27,6 +27,7 @@ export function generateWebSiteSchema(siteUrl: string) {
       "@type": "EducationalOrganization",
       name: "TutoLearner",
       url: siteUrl,
+      logo: `${siteUrl}/images/branding/logo_Tutolearner.jpeg`,
     },
   };
 }
