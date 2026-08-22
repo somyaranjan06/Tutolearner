@@ -56,7 +56,7 @@ export default function TutorsPage() {
             Teaching Collective
           </span>
           <h1 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-900 leading-tight">
-            Our Dedicated 3-Tutor Faculty
+            Our Dedicated Tutor Faculty
           </h1>
           <p className="text-base sm:text-lg text-slate-600 leading-relaxed font-normal">
             Focused, accountable mentorship from verified subject-matter educators. Filter by subject or explore individual faculty profiles.
