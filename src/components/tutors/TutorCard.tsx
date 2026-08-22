@@ -4,7 +4,7 @@ import Link from "next/link";
 import { Tutor } from "@/types";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
-import { ArrowRight, Sparkles, CheckCircle2, ShieldCheck, UserCheck } from "lucide-react";
+import { ArrowRight, ShieldCheck } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 interface TutorCardProps {
@@ -67,55 +67,20 @@ export function TutorCard({ tutor, className, isCompact = false }: TutorCardProp
           </div>
         </div>
 
-        {/* Card Body */}
+        {/* Card Body - Clean, concise, easy to scan */}
         <CardContent className="p-6 sm:p-7 space-y-4">
-          <div>
-            <p className="text-2xs font-bold uppercase tracking-wider text-slate-600 mb-1.5">
-              Faculty Profile
-            </p>
-            <p className="text-sm text-slate-600 leading-relaxed font-normal">
-              {tutor.shortBio}
-            </p>
-          </div>
+          {/* One-Line Teaching Description */}
+          <p className="text-sm text-slate-700 leading-relaxed font-normal">
+            {tutor.cardDescription || tutor.shortBio}
+          </p>
 
-          {!isCompact && (
-            <div className="rounded-xl bg-slate-50 p-4 border border-slate-200/70 space-y-1.5">
-              <div className="flex items-center gap-1.5 text-2xs font-bold uppercase tracking-wider text-slate-700">
-                <Sparkles className="h-3.5 w-3.5 text-[#0B4982]" />
-                <span>Pedagogy &amp; Approach</span>
-              </div>
-              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
-                {tutor.teachingStyle}
-              </p>
+          {/* Best For Short Line */}
+          {tutor.bestFor && (
+            <div className="rounded-xl bg-blue-50/70 p-3 sm:p-3.5 border border-blue-200/80 text-xs sm:text-sm text-slate-800 leading-snug">
+              <strong className="font-bold text-[#0B4982]">Best for: </strong>
+              <span>{tutor.bestFor.replace(/^Best for:\s*/i, "")}</span>
             </div>
           )}
-
-          {/* Best Suited For Section */}
-          {tutor.bestSuitedFor && (
-            <div className="rounded-xl bg-blue-50/70 p-3.5 border border-blue-200/80 space-y-1">
-              <div className="flex items-center gap-1.5 text-2xs font-bold uppercase tracking-wider text-[#0B4982]">
-                <UserCheck className="h-3.5 w-3.5 text-[#0B4982]" />
-                <span>Best Suited For</span>
-              </div>
-              <p className="text-xs sm:text-sm text-slate-700 leading-relaxed font-medium">
-                {tutor.bestSuitedFor}
-              </p>
-            </div>
-          )}
-
-          <div>
-            <p className="text-2xs font-bold uppercase tracking-wider text-slate-600 mb-2">
-              Core Instructional Focus
-            </p>
-            <ul className="space-y-1.5">
-              {tutor.methodologyFocus.slice(0, 3).map((focus, index) => (
-                <li key={index} className="flex items-start gap-2 text-xs sm:text-sm text-slate-700">
-                  <CheckCircle2 className="h-4 w-4 text-[#579631] shrink-0 mt-0.5" />
-                  <span className="leading-snug font-normal">{focus}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
         </CardContent>
       </div>
 
@@ -133,7 +98,7 @@ export function TutorCard({ tutor, className, isCompact = false }: TutorCardProp
 
         <Button
           asChild
-          className="flex-1 justify-center bg-[#0B4982] hover:bg-[#083A68] text-white text-xs sm:text-sm font-semibold gap-1.5 rounded-xl shadow-subtle"
+          className="flex-1 justify-center bg-[#0B4982] hover:bg-[#083A68] text-white text-xs sm:text-sm font-semibold gap-1.5 rounded-xl shadow-subtle hover:shadow-md"
         >
           <Link href={`/contact?tutor=${tutor.slug}`}>
             <span>Enquire with {firstName}</span>
