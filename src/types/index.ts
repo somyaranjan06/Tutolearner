@@ -49,6 +49,7 @@ export interface Subject {
   slug: string;
   tagline: string;
   description: string;
+  metaDescription?: string;
   tutor: string[];
   tutorSlugs: string[];
   icon: string;

@@ -45,7 +45,9 @@ export async function generateMetadata({
     title: {
       absolute: `${subject.name} Tutoring & Syllabus | TutoLearner`,
     },
-    description: `${subject.name} academic guidance led by ${facultyNames}. ${subject.description}`,
+    description:
+      subject.metaDescription ||
+      `${subject.name} academic guidance led by ${facultyNames}. ${subject.description}`,
     alternates: {
       canonical: canonicalUrl,
     },

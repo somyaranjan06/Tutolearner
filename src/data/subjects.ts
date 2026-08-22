@@ -6,6 +6,7 @@ export const subjects: Subject[] = [
     slug: "mathematics",
     tagline: "First-Principles Deductive Logic & Computational Rigor",
     description: "Developing logical deduction, numerical fluency, algebraic mastery, and systematic geometric proof techniques through intuitive concept breakdown rather than mechanical memorization.",
+    metaDescription: "Personalized 1-on-1 Mathematics tutoring focused on deeper understanding and problem-solving.",
     tutor: ["Somya Ranjan Naik"],
     tutorSlugs: ["somya-ranjan-naik"],
     icon: "Calculator",
