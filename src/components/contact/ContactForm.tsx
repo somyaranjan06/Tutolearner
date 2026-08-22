@@ -64,7 +64,9 @@ export function ContactForm() {
       }
     }
     if (tutorParam) {
-      const found = tutors.find((t) => t.slug === tutorParam);
+      const found = tutors.find(
+        (t) => t.slug === tutorParam || (t.slug === "shivangi" && tutorParam === "shiwangi")
+      );
       if (found && found.subjects.length > 0) {
         return found.subjects[0] as EnquiryFormData["subject"];
       }
@@ -74,7 +76,9 @@ export function ContactForm() {
 
   const initialTutor = React.useMemo(() => {
     if (!tutorParam) return "Somya Ranjan Naik";
-    const found = tutors.find((t) => t.slug === tutorParam);
+    const found = tutors.find(
+      (t) => t.slug === tutorParam || (t.slug === "shivangi" && tutorParam === "shiwangi")
+    );
     return found ? found.name : "Somya Ranjan Naik";
   }, [tutorParam]);
 

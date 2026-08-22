@@ -66,7 +66,7 @@ export const tutors: Tutor[] = [
   },
   {
     name: "Shiwangi",
-    slug: "shiwangi",
+    slug: "shivangi",
     roleTitle: "Lead Faculty – Social Science",
     subjects: ["Social Science"],
     availableSubjects: ["Social Science (History, Geography, Political Science, Economics)"],

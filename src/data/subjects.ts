@@ -145,7 +145,7 @@ export const subjects: Subject[] = [
     tagline: "Thematic History, Spatial Geography, Civics & Economics",
     description: "Cultivating historical perspective, spatial geographic literacy, constitutional awareness, and economic analysis through structured thematic mapping and high-scoring essay formulations.",
     tutor: ["Shiwangi"],
-    tutorSlugs: ["shiwangi"],
+    tutorSlugs: ["shivangi"],
     icon: "Globe2",
     targetGrades: "Grades 6 to 10 & Humanities Foundation",
     whyItMatters: "Social Science equips students with critical awareness of democratic institutions, global history, environmental stewardship, and economic systems. It builds strong analytical reading, synthesis, and structured written communication skills essential for academic and professional success.",

@@ -69,7 +69,7 @@ export function generateOrganizationSchema(siteUrl: string) {
         "@type": "Person",
         name: "Shiwangi",
         jobTitle: "Lead Faculty – Social Science",
-        url: `${siteUrl}/tutors/shiwangi`,
+        url: `${siteUrl}/tutors/shivangi`,
       },
       {
         "@type": "Person",

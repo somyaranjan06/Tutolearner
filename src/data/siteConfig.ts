@@ -51,7 +51,7 @@ export const siteConfig = {
     {
       name: "Shiwangi",
       role: "Lead Faculty – Social Science",
-      slug: "shiwangi",
+      slug: "shivangi",
       subjects: ["Social Science"],
     },
     {

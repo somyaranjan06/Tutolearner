@@ -13,6 +13,15 @@ const nextConfig: NextConfig = {
   experimental: {
     optimizePackageImports: ["lucide-react"],
   },
+  async redirects() {
+    return [
+      {
+        source: "/tutors/shiwangi",
+        destination: "/tutors/shivangi",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;
