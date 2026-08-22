@@ -6,7 +6,6 @@ import { PositioningStrip } from "@/components/home/PositioningStrip";
 import { SubjectExplorer } from "@/components/home/SubjectExplorer";
 import { TutorsSection } from "@/components/home/TutorsSection";
 import { LearningProcess } from "@/components/home/LearningProcess";
-import { LearningResources } from "@/components/home/LearningResources";
 import { FAQSection } from "@/components/home/FAQSection";
 import { AboutFounder } from "@/components/home/AboutFounder";
 import { FinalCTA } from "@/components/home/FinalCTA";
@@ -67,10 +66,7 @@ export default function HomePage() {
         {/* 6. How TutoLearner Works (4-Step Process) */}
         <LearningProcess />
 
-        {/* 7. Learning Resources (Coming Soon) */}
-        <LearningResources />
-
-        {/* 8. FAQ Section */}
+        {/* 7. FAQ Section */}
         <FAQSection />
 
         {/* 10. About the Founder (Somya Ranjan Naik) */}
