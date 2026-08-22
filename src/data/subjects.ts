@@ -146,6 +146,7 @@ export const subjects: Subject[] = [
     slug: "social-science",
     tagline: "Thematic History, Spatial Geography, Civics & Economics",
     description: "Cultivating historical perspective, spatial geographic literacy, constitutional awareness, and economic analysis through structured thematic mapping and high-scoring essay formulations.",
+    metaDescription: "1-on-1 Social Science tutoring focused on history, geography, civics, and economics.",
     tutor: ["Shiwangi"],
     tutorSlugs: ["shivangi"],
     icon: "Globe2",
