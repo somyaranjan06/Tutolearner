@@ -7,7 +7,6 @@ import { SubjectExplorer } from "@/components/home/SubjectExplorer";
 import { TutorsSection } from "@/components/home/TutorsSection";
 import { LearningProcess } from "@/components/home/LearningProcess";
 import { LearningResources } from "@/components/home/LearningResources";
-import { TeachingPhilosophy } from "@/components/home/TeachingPhilosophy";
 import { FAQSection } from "@/components/home/FAQSection";
 import { AboutFounder } from "@/components/home/AboutFounder";
 import { FinalCTA } from "@/components/home/FinalCTA";
@@ -71,10 +70,7 @@ export default function HomePage() {
         {/* 7. Learning Resources (Coming Soon) */}
         <LearningResources />
 
-        {/* 8. Teaching Philosophy (Brand Manifesto) */}
-        <TeachingPhilosophy />
-
-        {/* 9. FAQ Section */}
+        {/* 8. FAQ Section */}
         <FAQSection />
 
         {/* 10. About the Founder (Somya Ranjan Naik) */}
