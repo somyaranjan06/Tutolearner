@@ -215,6 +215,7 @@ export const subjects: Subject[] = [
     slug: "english",
     tagline: "Language Mechanics, Critical Literature & Expressive Composition",
     description: "Elevating grammatical accuracy, reading comprehension, critical literary analysis, and structured composition for polished communication and academic excellence.",
+    metaDescription: "1-on-1 English tutoring focused on communication, comprehension, and confidence.",
     tutor: ["Shreya Tiwari"],
     tutorSlugs: ["shreya-tiwari"],
     icon: "BookOpenCheck",
