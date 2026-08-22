@@ -4,49 +4,71 @@ export const faqs: FAQItem[] = [
   {
     id: "subjects-offered",
     question: "What subjects does TutoLearner offer?",
-    answer: "TutoLearner offers structured academic guidance across four core disciplines: Mathematics, Science (Physics, Chemistry, and Biology), Social Science (History, Geography, Political Science, and Economics), and English (Grammar, Composition, and Literature).",
-    category: "Subjects"
-  },
-  {
-    id: "who-are-the-tutors",
-    question: "Who are the tutors?",
-    answer: "Our tutoring team consists of Somya Ranjan Naik (Founder, teaching Mathematics & Science), Shiwangi (teaching Social Science), and Shreya Tiwari (teaching Science & English). Each educator directs instruction specifically within their dedicated subject areas.",
-    category: "Tutors"
-  },
-  {
-    id: "how-matching-works",
-    question: "How does TutoLearner match students with tutors?",
-    answer: "Matching is based on the student's required subject, current academic grade, and specific learning focus. For subjects with multiple experts (such as Science), learners can select their preferred tutor or receive an initial recommendation after a diagnostic consultation.",
-    category: "Matching"
-  },
-  {
-    id: "online-or-offline",
-    question: "Are classes online or offline?",
-    answer: "Classes are primarily held live online through interactive virtual classrooms with screen sharing, digital whiteboard walkthroughs, and direct problem solving. Specific hybrid or local batch availability can be discussed during enquiry.",
-    category: "Format"
+    answer:
+      "TutoLearner currently offers personalized 1-on-1 tuition in Mathematics, Science, Social Science and English.",
+    category: "Subjects",
   },
   {
     id: "grades-taught",
-    question: "Which classes/grades do you teach?",
-    answer: "We support learners from Middle School (Classes 6–8 foundational concepts), Secondary School (Classes 9–10 board examination preparation), and Senior Secondary levels (Classes 11–12 concept reinforcement).",
-    category: "Eligibility"
+    question: "Which grades does TutoLearner teach?",
+    answer:
+      "TutoLearner provides personalized tuition for students from Grades 1–12.",
+    category: "Grades",
   },
   {
-    id: "how-to-enquire",
-    question: "How can I enquire?",
-    answer: "You can submit an enquiry form directly on our Contact page. Select your subject, student grade, and preferred tutor, and our academic coordinator will reach out within 24 hours to schedule an introductory diagnostic review.",
-    category: "Enquiry"
+    id: "how-1-on-1-works",
+    question: "How does 1-on-1 tuition work?",
+    answer:
+      "Each student learns directly with a dedicated tutor. Sessions are focused on the student's learning needs, pace and areas requiring attention.",
+    category: "Learning",
+  },
+  {
+    id: "complimentary-assessment",
+    question: "What is the complimentary student assessment?",
+    answer:
+      "The complimentary student assessment helps us understand your child's current learning needs, identify areas that may require attention and suggest a suitable learning approach.",
+    category: "Assessment",
+  },
+  {
+    id: "matching-process",
+    question: "How does TutoLearner match students with tutors?",
+    answer:
+      "We consider the student's subject, learning needs and goals to help identify a suitable tutor and learning approach.",
+    category: "Matching",
   },
   {
     id: "choose-specific-tutor",
     question: "Can I choose a specific tutor?",
-    answer: "Yes. When submitting an enquiry, you can indicate a preferred instructor (Somya Ranjan Naik for Maths/Science, Shiwangi for Social Science, or Shreya Tiwari for Science/English) or request the best match for your schedule.",
-    category: "Tutors"
+    answer:
+      "Yes. You can enquire about a specific tutor through their profile. If you do not have a preference, our team can help recommend a suitable tutor.",
+    category: "Tutors",
   },
   {
-    id: "learning-resources-available",
-    question: "What learning resources are available?",
-    answer: "TutoLearner is developing curated concept notes, visual learning breakdowns, practice question banks, targeted worksheets, study guides, and educational articles. These resources are designed to help students reinforce concepts after class.",
-    category: "Resources"
-  }
+    id: "online-classes",
+    question: "Are classes conducted online?",
+    answer:
+      "TutoLearner primarily provides 1-on-1 online tuition, allowing students to learn directly with their tutor from wherever they are.",
+    category: "Format",
+  },
+  {
+    id: "how-to-book-assessment",
+    question: "How can I book a complimentary assessment?",
+    answer:
+      "Click “Book Your Free Assessment” on the website and submit the enquiry form with your child's details. Our team will review the information and contact you regarding the next step.",
+    category: "Booking",
+  },
+  {
+    id: "what-happens-after-enquiry",
+    question: "What happens after I submit an enquiry?",
+    answer:
+      "Our team reviews the information you provide and contacts you to discuss your child's learning needs and the next step.",
+    category: "Enquiry",
+  },
+  {
+    id: "learning-resources-provided",
+    question: "What learning resources does TutoLearner provide?",
+    answer:
+      "TutoLearner is developing learning resources such as concept notes, visual learning materials, practice questions, worksheets, study guides and educational articles.",
+    category: "Resources",
+  },
 ];

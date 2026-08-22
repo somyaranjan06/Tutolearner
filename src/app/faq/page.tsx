@@ -70,7 +70,7 @@ export default function FAQPage() {
           </p>
         </div>
 
-        <FAQAccordion items={faqs} defaultOpen="subjects-taught" />
+        <FAQAccordion items={faqs} defaultOpen="subjects-offered" />
 
         <CTASection
           title="Have a specific question not covered here?"
