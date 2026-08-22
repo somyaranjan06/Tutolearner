@@ -51,6 +51,7 @@ export interface Subject {
   slug: string;
   tagline: string;
   description: string;
+  previewDescription?: string;
   metaDescription?: string;
   tutor: string[];
   tutorSlugs: string[];

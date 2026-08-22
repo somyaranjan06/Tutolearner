@@ -1,93 +1,53 @@
 import * as React from "react";
 import Link from "next/link";
 import { subjects } from "@/data/subjects";
-import { ArrowRight, UserCheck } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 export function SubjectExplorer() {
   return (
-    <section id="subjects" className="py-20 sm:py-24 lg:py-32 bg-slate-50/60 border-b border-slate-200/80">
+    <section id="subjects" className="py-14 sm:py-16 lg:py-20 bg-slate-50/60 border-b border-slate-200/80">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="max-w-3xl mb-16 sm:mb-20 space-y-4">
+        <div className="max-w-3xl mx-auto text-center space-y-3 mb-10 sm:mb-12">
           <span className="text-2xs sm:text-xs font-bold uppercase tracking-wider text-[#0B4982] block">
             Curriculum Areas
           </span>
-          <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900 leading-[1.12]">
+          <h2 className="font-heading text-2.5xl sm:text-3xl md:text-4xl font-extrabold tracking-tight text-slate-900 leading-[1.15]">
             Explore Our Subjects
           </h2>
-          <p className="text-base sm:text-lg text-slate-600 leading-relaxed font-normal">
-            Specialized instruction across four core disciplines, delivered by subject-dedicated educators focused on concept clarity.
+          <p className="text-sm sm:text-base md:text-lg text-slate-600 leading-relaxed font-normal max-w-2xl mx-auto">
+            Personalized 1-on-1 support across core school subjects.
           </p>
         </div>
 
         {/* 4-Subject Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
-          {subjects.map((subject, index) => {
-            const isDual = subject.slug === "science";
-            const tutorText = isDual
-              ? "Somya Ranjan Naik · Shreya Tiwari"
-              : subject.tutor[0];
-
-            return (
-              <div
-                key={subject.slug}
-                className="group relative flex flex-col justify-between rounded-3xl border border-slate-200/90 bg-white p-8 sm:p-10 shadow-subtle hover:border-blue-200 hover:shadow-lifted transition-all duration-200"
-              >
-                <div className="space-y-6">
-                  {/* Top Meta Bar */}
-                  <div className="flex items-center justify-between gap-4">
-                    <span className="font-mono text-xs font-bold uppercase tracking-wider text-slate-600">
-                      0{index + 1}
-                    </span>
-                    <span className="rounded-full bg-blue-50/80 px-3 py-1 text-2xs font-semibold text-[#0B4982] border border-blue-100">
-                      {subject.targetGrades}
-                    </span>
-                  </div>
-
-                  {/* Subject Title & Tagline */}
-                  <div className="space-y-2">
-                    <h3 className="font-heading text-2.5xl sm:text-3xl font-extrabold text-slate-900 tracking-tight group-hover:text-[#0B4982] transition-colors">
-                      {subject.name}
-                    </h3>
-                    <p className="text-sm text-slate-600 font-medium">
-                      {subject.tagline}
-                    </p>
-                  </div>
-
-                  {/* Concise Description */}
-                  <p className="text-sm sm:text-base text-slate-600 leading-relaxed font-normal">
-                    {subject.description}
-                  </p>
-
-                  {/* Assigned Tutor Attribution Chip */}
-                  <div className="pt-2">
-                    <div className="inline-flex items-center gap-2 rounded-xl bg-slate-50 px-3.5 py-2 border border-slate-200/80 text-xs font-semibold text-slate-800">
-                      <UserCheck className="h-3.5 w-3.5 text-[#0B4982] shrink-0" />
-                      <span>{tutorText}</span>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Explore Subject CTA Button */}
-                <div className="mt-8 pt-6 border-t border-slate-100 flex items-center justify-between">
-                  <Link
-                    href={`/subjects/${subject.slug}`}
-                    className="inline-flex items-center gap-2 text-sm font-bold text-slate-900 group-hover:text-[#0B4982] transition-colors"
-                  >
-                    <span>Explore {subject.name}</span>
-                    <ArrowRight className="h-4 w-4 text-slate-600 group-hover:text-[#0B4982] group-hover:translate-x-1 transition-all" />
-                  </Link>
-
-                  <Link
-                    href={`/contact?subject=${subject.slug}`}
-                    className="text-xs font-semibold text-slate-700 hover:text-[#0B4982] transition-colors"
-                  >
-                    Enquire
-                  </Link>
-                </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+          {subjects.map((subject) => (
+            <div
+              key={subject.slug}
+              className="group flex flex-col justify-between rounded-2xl border border-slate-200/90 bg-white p-6 shadow-subtle hover:border-blue-200 hover:shadow-lifted transition-all duration-200"
+            >
+              <div className="space-y-3">
+                <h3 className="font-heading text-xl font-bold text-slate-900 tracking-tight group-hover:text-[#0B4982] transition-colors">
+                  {subject.name}
+                </h3>
+                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
+                  {subject.previewDescription || subject.tagline}
+                </p>
               </div>
-            );
-          })}
+
+              {/* Explore Subject Link */}
+              <div className="mt-6 pt-4 border-t border-slate-100">
+                <Link
+                  href={`/subjects/${subject.slug}`}
+                  className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold text-slate-900 group-hover:text-[#0B4982] transition-colors"
+                >
+                  <span>Explore Subject</span>
+                  <ArrowRight className="h-3.5 w-3.5 text-slate-500 group-hover:text-[#0B4982] group-hover:translate-x-0.5 transition-all" />
+                </Link>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>

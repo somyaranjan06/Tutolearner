@@ -3,6 +3,9 @@ import type { Metadata } from "next";
 import { Hero } from "@/components/home/Hero";
 import { ParentMessaging } from "@/components/home/ParentMessaging";
 import { TutorsSection } from "@/components/home/TutorsSection";
+import { SubjectExplorer } from "@/components/home/SubjectExplorer";
+import { TeachingPhilosophy } from "@/components/home/TeachingPhilosophy";
+import { LearningResources } from "@/components/home/LearningResources";
 import { AboutFounder } from "@/components/home/AboutFounder";
 import { FinalCTA } from "@/components/home/FinalCTA";
 import { siteConfig, getCanonicalUrl } from "@/data/siteConfig";
@@ -44,10 +47,19 @@ export default function HomePage() {
       {/* 3. Meet Our Tutors */}
       <TutorsSection />
 
-      {/* 4. Founder / Trust Section (Somya Ranjan Naik) */}
+      {/* 4. Explore Our Subjects */}
+      <SubjectExplorer />
+
+      {/* 5. Teaching Philosophy (Utilize Resources. Deliver Excellence.) */}
+      <TeachingPhilosophy />
+
+      {/* 6. Learning Resources (Coming Soon) */}
+      <LearningResources />
+
+      {/* 7. Meet the Founder (Somya Ranjan Naik) */}
       <AboutFounder />
 
-      {/* 5. Final CTA */}
+      {/* 8. Final CTA */}
       <FinalCTA />
     </div>
   );

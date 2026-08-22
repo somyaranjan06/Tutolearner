@@ -5,6 +5,7 @@ export const subjects: Subject[] = [
     name: "Mathematics",
     slug: "mathematics",
     tagline: "First-Principles Deductive Logic & Computational Rigor",
+    previewDescription: "Build strong foundations and problem-solving confidence.",
     description: "Developing logical deduction, numerical fluency, algebraic mastery, and systematic geometric proof techniques through intuitive concept breakdown rather than mechanical memorization.",
     metaDescription: "Personalized 1-on-1 Mathematics tutoring focused on deeper understanding and problem-solving.",
     tutor: ["Somya Ranjan Naik"],
@@ -75,6 +76,7 @@ export const subjects: Subject[] = [
     name: "Science",
     slug: "science",
     tagline: "Empirical Inquiry across Physics, Chemistry & Biology",
+    previewDescription: "Understand concepts through clear explanations and guided learning.",
     description: "Building an empirical, inquiry-driven understanding of physical laws, chemical reactions, and biological life processes through concept visualization, diagrams, and scientific modeling.",
     metaDescription: "1-on-1 Science tutoring focused on concepts, curiosity, and understanding.",
     tutor: ["Somya Ranjan Naik", "Shreya Tiwari"],
@@ -145,6 +147,7 @@ export const subjects: Subject[] = [
     name: "Social Science",
     slug: "social-science",
     tagline: "Thematic History, Spatial Geography, Civics & Economics",
+    previewDescription: "Connect ideas, concepts and real-world understanding.",
     description: "Cultivating historical perspective, spatial geographic literacy, constitutional awareness, and economic analysis through structured thematic mapping and high-scoring essay formulations.",
     metaDescription: "1-on-1 Social Science tutoring focused on history, geography, civics, and economics.",
     tutor: ["Shiwangi"],
@@ -159,41 +162,41 @@ export const subjects: Subject[] = [
         description: "Transforming long historical chapters into clear, interconnected chronological flowcharts."
       },
       {
-        title: "Cartography & Map Skills",
-        description: "Dedicated masterclasses on historical and geographical map-pointing for guaranteed exam marks."
+        title: "Cartographic Visualization",
+        description: "Systematic map-work practice and spatial memory anchors for resource distribution and historical boundaries."
       },
       {
         title: "Structured Answer Engineering",
-        description: "Framing 3-mark and 5-mark answers with distinct subheadings, key dates, and exact terminology."
+        description: "Techniques for structuring 3-mark and 5-mark answers with point-wise precision, subheadings, and underlined facts."
       }
     ],
     keyLearningAreas: [
       {
-        title: "History: World Nationalism & Indian Freedom Movement",
-        description: "Understanding socio-political revolutions, anti-colonial movements, and global economic transformations.",
-        topics: ["The Rise of Nationalism in Europe", "Nationalism in India (Non-Cooperation & Civil Disobedience)", "The Making of a Global World", "Print Culture & Modern World"]
+        title: "History: Global Modernization & Nationalism",
+        description: "National movements in India and Europe, industrialization eras, and the making of a global world.",
+        topics: ["Nationalism in Europe & India", "The Making of a Global World", "Age of Industrialization & Print Culture", "Historical Source & Image Analysis"]
       },
       {
-        title: "Geography: Resource Planning & Spatial Analysis",
-        description: "Physical geography, agricultural patterns, mineral distributions, and manufacturing industries.",
-        topics: ["Resources & Land Utilization", "Forest, Wildlife & Water Resources", "Agriculture & Cropping Patterns", "Minerals, Energy & Manufacturing Industries"]
+        title: "Geography: Resource Systems & Agriculture",
+        description: "Resource management, water security, agricultural patterns, minerals, energy, and manufacturing sectors.",
+        topics: ["Resources, Forest & Wildlife", "Water Resources & Multipurpose Projects", "Agriculture: Cropping Patterns & Food Security", "Minerals, Energy Resources & Industries"]
       },
       {
-        title: "Political Science: Democratic Institutions & Diversity",
-        description: "Constitutional governance, federal power-sharing, electoral politics, and outcomes of democracy.",
-        topics: ["Power Sharing & Federalism", "Gender, Religion & Caste in Politics", "Political Parties & Electoral Systems", "Outcomes & Challenges of Democracy"]
+        title: "Political Science: Democratic Governance",
+        description: "Power-sharing models, federal structures, gender-religion-caste dynamics, and political parties.",
+        topics: ["Power Sharing & Federalism Structures", "Democracy, Gender, Religion & Caste", "Political Parties & Electoral Systems", "Outcomes & Challenges of Democracy"]
       },
       {
-        title: "Economics: Development, Sectors & Globalisation",
-        description: "Macroeconomic development indices, credit mechanisms, formal and informal banking, and consumer rights.",
-        topics: ["Development & National Income Indices", "Sectors of the Indian Economy (Primary, Secondary, Tertiary)", "Money, Credit & Banking Systems", "Globalisation & Consumer Rights"]
+        title: "Economics: Development & Financial Systems",
+        description: "National income metrics, employment sectors, money and credit mechanics, and globalization.",
+        topics: ["Development Metrics & Human Development Index", "Sectors of the Indian Economy (Primary/Sec/Tertiary)", "Money & Credit (Formal/Informal Sources)", "Globalization & Consumer Rights"]
       }
     ],
     learningOutcomes: [
-      "Command over historical timelines, causes, and consequences of major political movements",
-      "Precision in map identification and location pointing across Indian geography and history",
-      "Deep understanding of democratic institutions, federalism, and fundamental constitutional rights",
-      "Ability to write well-structured, 5-point answers using correct academic terminology"
+      "Mastery of structured answer writing with clear headings, bullet points, and analytical justifications",
+      "Precision in map-pointing exercises across historical sites, agricultural regions, and industrial centers",
+      "Clear chronological understanding of major historical events, causes, and socio-economic outcomes",
+      "Confidence in analyzing economic and constitutional concepts with real-world contemporary context"
     ],
     curriculumNote: "[Curriculum topics listed above represent illustrative standard modules adapted to CBSE, ICSE, and State Board frameworks for Grades 6–10. Exact syllabus pacing is aligned during the diagnostic consultation.]",
     faqs: [
@@ -215,6 +218,7 @@ export const subjects: Subject[] = [
     name: "English",
     slug: "english",
     tagline: "Language Mechanics, Critical Literature & Expressive Composition",
+    previewDescription: "Build stronger communication, comprehension and writing skills.",
     description: "Elevating grammatical accuracy, reading comprehension, critical literary analysis, and structured composition for polished communication and academic excellence.",
     metaDescription: "1-on-1 English tutoring focused on communication, comprehension, and confidence.",
     tutor: ["Shreya Tiwari"],
