@@ -42,7 +42,7 @@ export async function generateMetadata({
 
   return {
     title: {
-      absolute: `${tutor.name} | ${tutor.roleTitle} – TutoLearner`,
+      absolute: tutor.metaTitle || `${tutor.name} | ${tutor.roleTitle} – TutoLearner`,
     },
     description:
       tutor.metaDescription ||
